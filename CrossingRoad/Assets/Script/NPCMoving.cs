@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TW_NPC : MonoBehaviour
+public class NPCMoving : MonoBehaviour
 {
 
     public int xStart;
