@@ -39,10 +39,6 @@ public class gameManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneBuildIndex: SceneManager.GetActiveScene().buildIndex + 1); // Gets next build index in the list
 
-        //Reset Parameters
-        /*lookedLeft = false;
-        lookedRight = false;
-        isMoving = false;*/
     }
 
 }
