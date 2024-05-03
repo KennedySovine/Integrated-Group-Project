@@ -11,6 +11,10 @@ public class gameManager : MonoBehaviour
     public bool mustCheck = true;
 
     public bool spacePressed = false;
+
+    public Camera[] cameras = new Camera[3];
+    private int camNumCurrent = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,5 +49,24 @@ public class gameManager : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    public void changeCamera(bool side) // True = turn right False = turn left
+    {
+        if (side)
+        {
+            if (camNumCurrent == 2)
+            {
+                return;
+            }
+
+            camNumCurrent++;
+            return;
+        }
+        if (camNumCurrent == 0)
+        {
+            return;
+        }
+        camNumCurrent--;
     }
 }
