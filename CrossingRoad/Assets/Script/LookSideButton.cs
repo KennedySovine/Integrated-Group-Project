@@ -5,30 +5,33 @@ using UnityEngine.UI;
 
 public class LookSideButton : MonoBehaviour
 {
-    private gameManager GM;
+    private LevelManager LM;
 
     private void Start()
     {
-        GM = gameManager.Instance;
+        LM = GameObject.Find("LevelManager").GetComponent<LevelManager>();
     }
 
     private void Update()
     {
-        if (GM.isMoving)
+        if (GetComponent<Button>().interactable)
         {
-            GetComponent<Button>().interactable = false;
+            if (LM.isMoving)
+            {
+                GetComponent<Button>().interactable = false;
+            }
         }
     }
 
     public void LookLeft()
     {
         Debug.Log("Left Click");
-        GM.changeCamera(false);
+        LM.changeCamera(false);
     }
 
     public void LookRight()
     {
         Debug.Log("Right Click");
-        GM.changeCamera(true);
+        LM.changeCamera(true);
     }
 }

@@ -7,23 +7,23 @@ public class PCMoving : MonoBehaviour
 
     public float speed = 2;
 
-    public gameManager GM;
+    public LevelManager LM;
 
     // Start is called before the first frame update
     void Start()
     {
-        GM = gameManager.Instance;
+        LM = GameObject.Find("LevelManager").GetComponent<LevelManager>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GM.requirementsMet())
+        if (LM.requirementsMet())
         {
-            if (GM.spacePressed)
+            if (LM.spacePressed)
             {
-                GM.isMoving = true;
+                LM.isMoving = true;
                 transform.Translate(Vector3.forward * speed * Time.deltaTime);
             }
         }
