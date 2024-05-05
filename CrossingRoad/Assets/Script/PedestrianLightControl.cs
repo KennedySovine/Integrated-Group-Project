@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightControl : MonoBehaviour
+public class PedestrianLightControl : MonoBehaviour
 {
-    public GameObject[] Lights = new GameObject[3];
-    public int waitTime;
+        public GameObject[] Lights = new GameObject[2];
+    public int waitTime = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -28,20 +28,14 @@ public class LightControl : MonoBehaviour
             Stop();
             yield return new WaitForSeconds(waitTime);
             LightOff();
-            Ready();
-            yield return new WaitForSeconds(waitTime);
-            LightOff();
             Go();
-            yield return new WaitForSeconds(waitTime);
-            LightOff();
-            SafeStop();
             yield return new WaitForSeconds(waitTime);
         }
   
     }
 
     void LightOff(){
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 2; i++)
         {
             Lights[i].GetComponent<MeshRenderer>().material.DisableKeyword("_EMISSION");
         }
@@ -50,16 +44,7 @@ public class LightControl : MonoBehaviour
         Lights[0].GetComponent<MeshRenderer>().material.EnableKeyword("_EMISSION");
     }
 
-    void Ready(){
-        Lights[0].GetComponent<MeshRenderer>().material.EnableKeyword("_EMISSION");
-        Lights[1].GetComponent<MeshRenderer>().material.EnableKeyword("_EMISSION");
-    }
-
     void Go(){
-        Lights[2].GetComponent<MeshRenderer>().material.EnableKeyword("_EMISSION");
-    }
-
-    void SafeStop(){
         Lights[1].GetComponent<MeshRenderer>().material.EnableKeyword("_EMISSION");
     }
 }
