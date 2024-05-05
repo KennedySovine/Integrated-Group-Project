@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 26495921}
   - component: {fileID: 26495920}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: YellowRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -233,13 +233,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26495918}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9739995, y: 0.8629999, z: 0.16699982}
-  m_LocalScale: {x: 0.75454015, y: 0.75454015, z: 0.75454015}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -7.7369447, y: 650.43665, z: 181.9781}
+  m_LocalScale: {x: 146.83476, y: 169.76303, z: 146.83476}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 608920456}
-  m_RootOrder: 2
+  m_Father: {fileID: 2070614554138093626}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &26495920
 SphereCollider:
@@ -405,7 +405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &75998928
 RectTransform:
   m_ObjectHideFlags: 0
@@ -422,10 +422,10 @@ RectTransform:
   m_Father: {fileID: 687444982}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -634, y: 380}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 7, y: -238}
+  m_SizeDelta: {x: 3408, y: 1748}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &75998929
 MonoBehaviour:
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 512202307}
   - component: {fileID: 512202306}
   m_Layer: 0
-  m_Name: Sphere (5)
+  m_Name: GreenLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -700,13 +700,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512202304}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75454015, y: 0.75454015, z: 0.75454015}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 24.76155, y: 456.27142, z: -202.16548}
+  m_LocalScale: {x: 146.83476, y: 169.76303, z: 146.83476}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 608920456}
-  m_RootOrder: 6
+  m_Father: {fileID: 2070614554138093626}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &512202306
 SphereCollider:
@@ -878,7 +878,7 @@ GameObject:
   - component: {fileID: 595852299}
   - component: {fileID: 595852298}
   m_Layer: 0
-  m_Name: Sphere (2)
+  m_Name: GreenRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -891,13 +891,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595852296}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9739995, y: 0, z: 0.16699982}
-  m_LocalScale: {x: 0.75454015, y: 0.75454015, z: 0.75454015}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -7.7369447, y: 456.27142, z: 181.9781}
+  m_LocalScale: {x: 146.83476, y: 169.76303, z: 146.83476}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 608920456}
-  m_RootOrder: 3
+  m_Father: {fileID: 2070614554138093626}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &595852298
 SphereCollider:
@@ -962,44 +962,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595852296}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &608920455
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 608920456}
-  m_Layer: 0
-  m_Name: Toucan Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &608920456
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608920455}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.99, y: 6.567, z: -6.316}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2070614554138093626}
-  - {fileID: 1588982573}
-  - {fileID: 26495919}
-  - {fileID: 595852297}
-  - {fileID: 1546386258}
-  - {fileID: 810411623}
-  - {fileID: 512202305}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &664625591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1109,7 @@ GameObject:
   - component: {fileID: 810411625}
   - component: {fileID: 810411624}
   m_Layer: 0
-  m_Name: Sphere (4)
+  m_Name: YellowLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1160,13 +1122,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810411622}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8629999, z: 0}
-  m_LocalScale: {x: 0.75454015, y: 0.75454015, z: 0.75454015}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 24.76155, y: 650.43665, z: -202.16548}
+  m_LocalScale: {x: 146.83476, y: 169.76303, z: 146.83476}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 608920456}
-  m_RootOrder: 5
+  m_Father: {fileID: 2070614554138093626}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &810411624
 SphereCollider:
@@ -1390,7 +1352,7 @@ GameObject:
   - component: {fileID: 1377804132}
   - component: {fileID: 1377804131}
   m_Layer: 0
-  m_Name: Sphere (7)
+  m_Name: Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1634,7 +1596,7 @@ GameObject:
   - component: {fileID: 1546386260}
   - component: {fileID: 1546386259}
   m_Layer: 0
-  m_Name: Sphere (3)
+  m_Name: RedLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1647,13 +1609,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546386257}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.8499999, z: 0}
-  m_LocalScale: {x: 0.75454015, y: 0.75454015, z: 0.75454015}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 24.76155, y: 872.50055, z: -202.16548}
+  m_LocalScale: {x: 146.83476, y: 169.76303, z: 146.83476}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 608920456}
-  m_RootOrder: 4
+  m_Father: {fileID: 2070614554138093626}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1546386259
 SphereCollider:
@@ -1784,7 +1746,7 @@ GameObject:
   - component: {fileID: 1588982575}
   - component: {fileID: 1588982574}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: RedRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1797,13 +1759,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588982572}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.9739995, y: 1.8499999, z: 0.16699982}
-  m_LocalScale: {x: 0.75454015, y: 0.75454015, z: 0.75454015}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -7.7369447, y: 872.50055, z: 181.9781}
+  m_LocalScale: {x: 146.83476, y: 169.76303, z: 146.83476}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 608920456}
-  m_RootOrder: 1
+  m_Father: {fileID: 2070614554138093626}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1588982574
 SphereCollider:
@@ -2468,7 +2430,7 @@ GameObject:
   - component: {fileID: 2000906546}
   - component: {fileID: 2000906545}
   m_Layer: 0
-  m_Name: Sphere (6)
+  m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2565,7 +2527,7 @@ GameObject:
   - component: {fileID: 2022203356}
   - component: {fileID: 2022203355}
   m_Layer: 0
-  m_Name: Sphere (8)
+  m_Name: Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2809,12 +2771,18 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2546239255056184267}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 1.0388684, y: -2.0279746, z: 0.12724209}
-  m_LocalScale: {x: 0.0051387004, y: 0.004444667, z: 0.0051387004}
+  m_LocalPosition: {x: 15.028868, y: 4.5390253, z: -6.188758}
+  m_LocalScale: {x: 0.0051387013, y: 0.004444667, z: 0.0051387013}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 608920456}
-  m_RootOrder: 0
+  m_Children:
+  - {fileID: 1588982573}
+  - {fileID: 26495919}
+  - {fileID: 595852297}
+  - {fileID: 1546386258}
+  - {fileID: 810411623}
+  - {fileID: 512202305}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2362570416366139807
 MeshFilter:
@@ -2835,6 +2803,7 @@ GameObject:
   - component: {fileID: 2070614554138093626}
   - component: {fileID: 1915583028891316109}
   - component: {fileID: 7551094756090829122}
+  - component: {fileID: 7551094756090829123}
   m_Layer: 0
   m_Name: ToucanLight
   m_TagString: Untagged
@@ -2966,3 +2935,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7551094756090829123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2546239255056184267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ae439819c7547068775cde59ea2a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightLights:
+  - {fileID: 1588982572}
+  - {fileID: 26495918}
+  - {fileID: 595852296}
+  leftLights:
+  - {fileID: 1546386257}
+  - {fileID: 810411622}
+  - {fileID: 512202304}

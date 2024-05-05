@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
 
+[Header("Crossing Parameters")]
     public bool lookedLeft = false;
     public bool lookedRight = false;
 
@@ -14,6 +15,7 @@ public class LevelManager : MonoBehaviour
     public bool isMoving = false;
 
 
+[Header("Camera Parameters")]
     public Camera[] cameras = new Camera[3];
     private int camNumCurrent = 1;
 
@@ -58,6 +60,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+//check if the player has looked left and right
     public bool requirementsMet()
     {
         if (!mustCheck)
@@ -71,6 +74,7 @@ public class LevelManager : MonoBehaviour
         return false;
     }
 
+//change the camera view
     public void changeCamera(bool side) // True = turn right False = turn left
     {
         if (side)
@@ -96,13 +100,9 @@ public class LevelManager : MonoBehaviour
         cameras[camNumCurrent].enabled = true;
     }
 
+//load the next scene
     public void loadScene()
     {
         SceneManager.LoadScene(sceneBuildIndex: 1);
-
-        //Reset Parameters
-        /*lookedLeft = false;
-        lookedRight = false;
-        isMoving = false;*/
     }
 }
