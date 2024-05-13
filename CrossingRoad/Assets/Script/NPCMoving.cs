@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class NPCMoving : MonoBehaviour
 {
-
-    public int xStart;
-    private Vector3 startingPosition;
+    public Vector3 startingPosition;
     public bool reverse;
 
-    public float speed = 2;
+    private float speed;
 
     private void Start()
     {
         startingPosition = transform.position;
-        startingPosition.x = xStart;
+        if (reverse){
+            startingPosition.x = 150;
+        }
+        else{
+            startingPosition.x = -150;
+        }
+        newSpeed();
     }
 
     // Update is called once per frame
@@ -22,19 +26,24 @@ public class NPCMoving : MonoBehaviour
     {
         if (reverse)
         {
-            if (transform.position.x <= -18)
+            if (transform.position.x <= -150)
             {
                 transform.position = startingPosition;
+                newSpeed();
             }
         }
         else
         {
-            if (transform.position.x >= 15)
+            if (transform.position.x >= 150)
             {
                 transform.position = startingPosition;
+                newSpeed();
             }
         }
 
-        transform.Translate(-Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
+    }
+    private void newSpeed(){
+        speed = Random.Range(3.0f, 5.0f);
     }
 }

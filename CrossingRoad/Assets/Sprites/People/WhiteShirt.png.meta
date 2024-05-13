@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1e0981a2f1e0c4a6bad421f2b88b4916
+guid: 15ee6facfc6bd48808067cf74a4a8163
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -103,18 +103,106 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: WhiteShirt_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 683
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca78623798d24beabea1b265c5437c4
+      internalID: -1295624522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteShirt_1
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 0
+        width: 683
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b6a32cc4fe5427ca368174f6d439a3
+      internalID: 1212417739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteShirt_2
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 0
+        width: 683
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd59105a6cd3a4274895b94162eaea1d
+      internalID: 1611925547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhiteShirt_3
+      rect:
+        serializedVersion: 2
+        x: 2049
+        y: 0
+        width: 683
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c411708860df54636ac39422925b5c82
+      internalID: 94615821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ba929098a76cd4fa7a9d92117d06d1ce
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WhiteShirt_0: -1295624522
+      WhiteShirt_1: 1212417739
+      WhiteShirt_3: 94615821
+      WhiteShirt_2: 1611925547
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
