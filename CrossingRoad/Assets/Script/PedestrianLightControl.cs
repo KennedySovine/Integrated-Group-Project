@@ -4,34 +4,32 @@ using UnityEngine;
 
 public class PedestrianLightControl : MonoBehaviour
 {
-        public GameObject[] Lights = new GameObject[2];
-    public int waitTime = 3;
+    public GameObject[] Lights = new GameObject[2];
+    public GameObject TrafficLights;
+
+    private LightControl lightControl;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(LightSequence());
         
+        lightControl = TrafficLights.GetComponent<LightControl>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    IEnumerator LightSequence()
-    {
-        while (true)
+        if (lightControl.trafficMoving)
         {
             LightOff();
             Stop();
-            yield return new WaitForSeconds(waitTime);
+        }
+        else if (!lightControl.trafficMoving)
+        {
             LightOff();
             Go();
-            yield return new WaitForSeconds(waitTime);
         }
-  
     }
 
     void LightOff(){

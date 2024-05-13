@@ -5,11 +5,17 @@ using UnityEngine;
 public class LightControl : MonoBehaviour
 {
     public GameObject[] Lights = new GameObject[3];
-    public int waitTime;
+    private int waitTime;
+
+    private LevelManager levelManager;
+
+    public bool trafficMoving = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        waitTime = levelManager.TimeForCrossing;
         StartCoroutine(LightSequence());
         
     }
@@ -26,16 +32,18 @@ public class LightControl : MonoBehaviour
         {
             LightOff();
             Stop();
+            trafficMoving = false;
             yield return new WaitForSeconds(waitTime);
             LightOff();
             Ready();
-            yield return new WaitForSeconds(waitTime);
+            trafficMoving = true;
+            yield return new WaitForSeconds(waitTime / 3);
             LightOff();
             Go();
             yield return new WaitForSeconds(waitTime);
             LightOff();
             SafeStop();
-            yield return new WaitForSeconds(waitTime);
+            yield return new WaitForSeconds(waitTime / 3);
         }
   
     }

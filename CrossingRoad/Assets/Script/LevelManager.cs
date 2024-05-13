@@ -14,6 +14,8 @@ public class LevelManager : MonoBehaviour
     public bool spacePressed = false;
     public bool isMoving = false;
 
+    public int TimeForCrossing = 10; //Time it takes for the lights to change
+
 
 [Header("Camera Parameters")]
     public Camera[] cameras = new Camera[3];
