@@ -35,6 +35,6 @@ public class NPCMoving : MonoBehaviour
             }
         }
 
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(-Vector3.forward * speed * Time.deltaTime);
     }
 }

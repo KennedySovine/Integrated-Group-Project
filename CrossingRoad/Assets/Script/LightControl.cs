@@ -37,13 +37,13 @@ public class LightControl : MonoBehaviour
             LightOff();
             Ready();
             trafficMoving = true;
-            yield return new WaitForSeconds(waitTime / 3);
+            yield return new WaitForSeconds(waitTime / 5);
             LightOff();
             Go();
             yield return new WaitForSeconds(waitTime);
             LightOff();
             SafeStop();
-            yield return new WaitForSeconds(waitTime / 3);
+            yield return new WaitForSeconds(waitTime / 5);
         }
   
     }
