@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class LevelManager : MonoBehaviour
 [Header("Camera Parameters")]
     public Camera[] cameras = new Camera[3];
     private int camNumCurrent = 1;
+
+[Header("Pop-Up Parameters")]
+    public GameObject popUp;
+    public Text popUpText;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +45,7 @@ public class LevelManager : MonoBehaviour
             Debug.Log("space key was pressed");
             if (!requirementsMet())
             {
-                //Pop up a message bar that tells the player to make sure to check left and right
+                StartCoroutine(CheckMessage());
             }
             else
             {
@@ -106,5 +111,15 @@ public class LevelManager : MonoBehaviour
     public void loadScene()
     {
         SceneManager.LoadScene(sceneBuildIndex: 1);
+    }
+
+    IEnumerator CheckMessage()
+    {
+        popUpText.text = "You must look left and right before crossing!";
+        popUp.SetActive(true);
+        Debug.Log("Before Waiting 3 seconds");
+        yield return new WaitForSeconds(3);
+        Debug.Log("After Waiting 3 Seconds");
+        popUp.SetActive(false);
     }
 }
