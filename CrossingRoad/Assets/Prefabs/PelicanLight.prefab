@@ -537,7 +537,6 @@ MonoBehaviour:
   - {fileID: 2394711529814608241}
   - {fileID: 2394711528534297575}
   TrafficLights: {fileID: 4212629499752900836}
-  waitTime: 10
 --- !u!1 &2394711529662354455
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +587,6 @@ MonoBehaviour:
   - {fileID: 2394711529076719023}
   - {fileID: 2394711529886674837}
   TrafficLights: {fileID: 4212629499752900836}
-  waitTime: 3
 --- !u!1 &2394711529814608241
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,7 +797,7 @@ GameObject:
   - component: {fileID: 140227540415130533}
   m_Layer: 0
   m_Name: PelicanLight
-  m_TagString: Untagged
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -891,5 +889,4 @@ MonoBehaviour:
   - {fileID: 2394711529127770922}
   - {fileID: 2394711528645168484}
   - {fileID: 2394711529359035868}
-  waitTime: 10
   trafficMoving: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CarMovingForward : MonoBehaviour
 {
     private LevelManager levelManager;
-    private int stopDistance = 20;
+    private int stopDistance = 15;
     public float maxSpeed = 20;
     private float currentSpeed = 0;
     private float acceleration = 0.01f;
@@ -16,11 +16,16 @@ public class CarMovingForward : MonoBehaviour
     {
         currentSpeed = 20;
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        trafficLight = FindNearestWithTag("Light");
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (trafficLight == null)
+        {
+            return;
+        }
         //If traffic light is red
         if (trafficLight.GetComponent<LightControl>().trafficMoving == false)
         {
@@ -43,7 +48,30 @@ public class CarMovingForward : MonoBehaviour
                 currentSpeed += acceleration;
             }
         }
-        transform.Translate(-Vector3.forward * currentSpeed * Time.deltaTime);
+        transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
+
+        if (transform.position.x > 150 || transform.position.x < -150)
+        {
+            Destroy(gameObject);
+        }
 
     }
+
+    private GameObject FindNearestWithTag(string tag)
+{
+    GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(tag);
+    GameObject closest = null;
+    float closestDistance = Mathf.Infinity;
+
+    foreach (GameObject obj in taggedObjects)
+    {
+        float newDistance = Vector3.Distance(transform.position, obj.transform.position);
+        if ( newDistance < closestDistance)
+        {
+            closestDistance = newDistance;
+            closest = obj;
+        }
+    }
+    return closest;
+}
 }

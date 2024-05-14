@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5834473566832153390}
   m_Layer: 0
   m_Name: ToucanLight
-  m_TagString: Untagged
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -819,7 +819,6 @@ MonoBehaviour:
   - {fileID: 4049534756736920774}
   - {fileID: 4049534755262590357}
   TrafficLights: {fileID: 4049534756986118716}
-  waitTime: 10
 --- !u!1 &4049534756736920774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,7 +1124,7 @@ GameObject:
   - component: {fileID: 4049534756986118718}
   m_Layer: 0
   m_Name: TrafficLights
-  m_TagString: Untagged
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1167,7 +1166,6 @@ MonoBehaviour:
   - {fileID: 4049534756969380160}
   - {fileID: 4049534755679519170}
   - {fileID: 4049534755177756260}
-  waitTime: 10
   trafficMoving: 0
 --- !u!114 &4049534756986118718
 MonoBehaviour:
@@ -1185,7 +1183,6 @@ MonoBehaviour:
   - {fileID: 4049534756929401149}
   - {fileID: 4049534755383405578}
   - {fileID: 4049534755898891308}
-  waitTime: 10
   trafficMoving: 0
 --- !u!1 &4049534757010410519
 GameObject:
@@ -1237,4 +1234,3 @@ MonoBehaviour:
   - {fileID: 4049534756087477380}
   - {fileID: 4049534756092214459}
   TrafficLights: {fileID: 4049534756986118716}
-  waitTime: 10

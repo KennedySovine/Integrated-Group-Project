@@ -26,6 +26,10 @@ public class LevelManager : MonoBehaviour
     public GameObject popUp;
     public Text popUpText;
 
+[Header("Car Paremeters")]
+    public GameObject[] car = new GameObject[3];
+    public GameObject[] carSpawns = new GameObject[2];
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,11 +39,14 @@ public class LevelManager : MonoBehaviour
 
         cameras[0].enabled = false;
         cameras[2].enabled = false;
+
+        spawnCar();
     }
 
     // Update is called once per frame
     void Update()
     {
+        spawnCar();
         if (Input.GetKeyDown("space"))
         {
             Debug.Log("space key was pressed");
@@ -107,12 +114,34 @@ public class LevelManager : MonoBehaviour
         cameras[camNumCurrent].enabled = true;
     }
 
-//load the next scene
-    public void loadScene()
-    {
-        SceneManager.LoadScene(sceneBuildIndex: 1);
-    }
+    public void spawnCar(){
+        int carNum;
+        //Car on the left
+        if (carSpawns[0] == null)
+        {
+        
+            carNum = Random.Range(0, 3);
+            carSpawns[0] = Instantiate(car[carNum], new Vector3 (-145, 3, 17.68f), Quaternion.identity);
+            if (carNum == 1) {
+                carSpawns[0].transform.Rotate(0, -90, 0);
+            } 
+            else {
+                carSpawns[0].transform.Rotate(0, 90, 0);
+            }
+        }
 
+        if (carSpawns[1] == null){
+            //Car on the right
+            carNum = Random.Range(0, 3);
+            carSpawns[1] = Instantiate(car[carNum], new Vector3 (145, 3, 7), Quaternion.identity);
+            if (carNum == 1) {
+                carSpawns[1].transform.Rotate(0, -270, 0);
+            } 
+            else {
+                carSpawns[1].transform.Rotate(0, -90, 0);
+            }
+        }
+    }
     IEnumerator CheckMessage()
     {
         popUpText.text = "You must look left and right before crossing!";
