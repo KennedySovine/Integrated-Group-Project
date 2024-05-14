@@ -14,7 +14,8 @@ public class LookSideButton : MonoBehaviour
 
     private void Update()
     {
-        if (gameObject.GetComponent<Button>().interactable)
+        Button button = gameObject.GetComponent<Button>();
+        if (button != null && button.interactable)
         {
             if (LM.isMoving)
             {
