@@ -23,6 +23,7 @@ public class EndLevel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        PlayerPrefs.SetInt("completedScenes", PlayerPrefs.GetInt("completedScenes") + 1);
         GM.loadNextScene();
     }
 }
