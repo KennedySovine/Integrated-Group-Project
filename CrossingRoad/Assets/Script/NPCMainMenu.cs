@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCMoving : MonoBehaviour
+public class NPCMainMenu : MonoBehaviour
 {
     public bool reverse;
 
@@ -25,14 +25,14 @@ public class NPCMoving : MonoBehaviour
         {
             if (transform.position.x <= minX)
             {
-                gameObject.SetActive(false);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
             }
         }
         else
         {
             if (transform.position.x >= maxX)
             {
-                gameObject.SetActive(false);
+                transform.rotation = Quaternion.Euler(0, 180, 0);
             }
         }
 
