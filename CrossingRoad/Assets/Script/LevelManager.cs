@@ -144,6 +144,11 @@ public class LevelManager : MonoBehaviour
             }
         }
     }
+
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     IEnumerator CheckMessage()
     {
         popUpText.text = "You must look left and right before crossing!";

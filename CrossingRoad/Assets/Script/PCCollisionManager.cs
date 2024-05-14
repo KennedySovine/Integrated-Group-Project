@@ -25,5 +25,12 @@ public class PCCollisionManager : MonoBehaviour
         {
             levelManager.isCrossing = true;
         }
+
+        //If player is hit by a car
+        if (collision.gameObject.tag == "Car")
+        {
+            //Restart scene
+            levelManager.RestartScene();
+        }
     }
 }
