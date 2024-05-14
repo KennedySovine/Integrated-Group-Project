@@ -26,8 +26,28 @@ public class CarMovingForward : MonoBehaviour
         {
             return;
         }
+
+        //If a zebra light
+        if (trafficLight.GetComponent<LightControl>() == null){
+            if (levelManager.requirementsMet() || levelManager.isCrossing){
+                //Slowdown car
+                if (Vector3.Distance(transform.position, trafficLight.transform.position) > (stopDistance * 1.05))
+                {
+                    if (currentSpeed > maxSpeed / 1.5)
+                    {
+                        currentSpeed -= acceleration;
+                    }
+                }
+                //Stop car
+                if (Vector3.Distance(transform.position, trafficLight.transform.position) < stopDistance)
+                {
+                    currentSpeed = 0;
+                
+                }
+            }
+        }
         //If traffic light is red
-        if (trafficLight.GetComponent<LightControl>().trafficMoving == false)
+        else if (trafficLight.GetComponent<LightControl>().trafficMoving == false)
         {
             if (Vector3.Distance(transform.position, trafficLight.transform.position) > (stopDistance * 1.05))
             {

@@ -15,6 +15,8 @@ public class LevelManager : MonoBehaviour
     public bool spacePressed = false;
     public bool isMoving = false;
 
+    public bool isCrossing = false;
+
     public int TimeForCrossing = 10; //Time it takes for the lights to change
 
 
