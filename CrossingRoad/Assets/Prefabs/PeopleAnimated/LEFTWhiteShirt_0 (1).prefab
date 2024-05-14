@@ -120,3 +120,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reverse: 1
   speed: 0
+  minX: -150
+  maxX: 150

@@ -19,7 +19,7 @@ public class NPCManager : MonoBehaviour
     void Start()
     {
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
-        //makeNPCs();
+        makeNPCs();
     }
 
     // Update is called once per frame

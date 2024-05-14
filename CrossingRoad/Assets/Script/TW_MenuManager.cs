@@ -2,20 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TW_MenuManager : MonoBehaviour
 {
+    public int completedScenes = 0 ;
 
-    public void PlayLevel()
+    public GameObject[] levels = new GameObject[7];
+
+    void Start()
     {
-        SceneManager.LoadSceneAsync("LevelScene");
+        if (!PlayerPrefs.HasKey("completedScenes"))
+        {
+            PlayerPrefs.SetInt("completedScenes", 0);
+        }
+
+        else{
+            completedScenes = PlayerPrefs.GetInt("completedScenes");
+        }
+
+        DisableLevels();
     }
 
-
-
-    public void QuitGame()
+    private void DisableLevels()
     {
-        Application.Quit();
+        for (int i = 0; i < 6-completedScenes; i++)
+        {
+            Button button = levels[i].GetComponent<Button>();
+            if (button != null)
+            {
+                button.interactable = false;
+            }
+        }
+    
     }
-        
 }

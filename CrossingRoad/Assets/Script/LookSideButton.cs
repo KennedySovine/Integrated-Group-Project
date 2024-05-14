@@ -19,7 +19,7 @@ public class LookSideButton : MonoBehaviour
         {
             if (LM.isMoving)
             {
-                GetComponent<Button>().interactable = false;
+                button.interactable = false;
             }
         }
     }

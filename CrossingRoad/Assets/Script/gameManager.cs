@@ -41,4 +41,9 @@ public class gameManager : MonoBehaviour
 
     }
 
+    public void loadSelectedScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneBuildIndex: sceneIndex); // Loads the scene with the index passed in
+    }
+
 }
