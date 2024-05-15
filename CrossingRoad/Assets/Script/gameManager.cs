@@ -10,6 +10,7 @@ public class gameManager : MonoBehaviour
 
     public int completedScenes;
 
+    private GameObject pauseMenu;
 
     private void Awake()
     {
@@ -26,13 +27,16 @@ public class gameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        pauseMenu = GameObject.Find("PauseMenu");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKey(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 7)
+        {
+            pauseMenu.SetActive(!pauseMenu.activeSelf);
+        }
     }
 
     public void loadNextScene()
@@ -44,6 +48,17 @@ public class gameManager : MonoBehaviour
     public void loadSelectedScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneBuildIndex: sceneIndex); // Loads the scene with the index passed in
+    }
+
+    public void goBack(GameObject menu){
+        optionsMenu.SetActive(false);
+        if (SceneManager.GetActiveScene().buildIndex != 7)
+        {
+            GameObject.Find("PauseMenu").SetActive(true);
+        }
+        else{
+            menu.SetActive(true);
+        }
     }
 
 }
