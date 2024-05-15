@@ -22,12 +22,9 @@ public class CarMovingForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (trafficLight == null)
-        {
-            return;
-        }
 
         //If a zebra light
+        Debug.Log(trafficLight.GetComponent<LightControl>());
         if (trafficLight.GetComponent<LightControl>() == null){
             if (levelManager.requirementsMet() || levelManager.isCrossing){
                 //Slowdown car
@@ -85,6 +82,7 @@ public class CarMovingForward : MonoBehaviour
 
     foreach (GameObject obj in taggedObjects)
     {
+        Debug.Log(obj);
         float newDistance = Vector3.Distance(transform.position, obj.transform.position);
         if ( newDistance < closestDistance)
         {
