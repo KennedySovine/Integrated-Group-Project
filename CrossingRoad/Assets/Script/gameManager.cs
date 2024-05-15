@@ -12,6 +12,8 @@ public class gameManager : MonoBehaviour
 
     private GameObject pauseMenu;
 
+    public GameObject optionsMenu;
+
     private void Awake()
     {
         if (Instance != null)
@@ -28,12 +30,15 @@ public class gameManager : MonoBehaviour
     void Start()
     {
         pauseMenu = GameObject.Find("PauseMenu");
+        optionsMenu = GameObject.Find("Options_Panel");
+        optionsMenu.SetActive(false);
+        pauseMenu.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 7)
+        if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 7)
         {
             pauseMenu.SetActive(!pauseMenu.activeSelf);
         }

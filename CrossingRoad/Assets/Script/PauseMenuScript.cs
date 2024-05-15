@@ -4,17 +4,10 @@ using UnityEngine;
 
 public class PauseMenuScript : MonoBehaviour
 {
-    public static PauseMenuScript Instance;
 
-    private void Awake()
+    void Start()
     {
-        if (Instance != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        
     }
 
     // Update is called once per frame
