@@ -10,9 +10,10 @@ public class gameManager : MonoBehaviour
 
     public int completedScenes;
 
+    [Header("UI Elements")]
     private GameObject pauseMenu;
-
     public GameObject optionsMenu;
+    public GameObject UI;
 
     private void Awake()
     {
@@ -23,7 +24,6 @@ public class gameManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
     }
 
     // Start is called before the first frame update
@@ -33,14 +33,30 @@ public class gameManager : MonoBehaviour
         optionsMenu = GameObject.Find("Options_Panel");
         optionsMenu.SetActive(false);
         pauseMenu.SetActive(false);
+        UI = null;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (UI == null)
+        {
+            UI = GameObject.Find("UI");
+        }
+
         if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 7)
         {
             pauseMenu.SetActive(!pauseMenu.activeSelf);
+            UI.SetActive(!pauseMenu.activeSelf);
+        }
+
+        if (pauseMenu.activeSelf)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
         }
     }
 
