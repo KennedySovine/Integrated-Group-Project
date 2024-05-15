@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 149732777}
   - component: {fileID: 149732776}
   m_Layer: 5
-  m_Name: Other_Title
+  m_Name: StPelican_Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -483,7 +483,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Puffin\n Crossing\n"
+  m_Text: Staggered Pelican Crossing
 --- !u!222 &149732777
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -547,12 +547,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2020256352}
-  m_Father: {fileID: 1002348998}
-  m_RootOrder: 3
+  m_Father: {fileID: 542197888}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 115.00006, y: 185}
+  m_AnchoredPosition: {x: 115.00002, y: 197.5}
   m_SizeDelta: {x: 190, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &151483071
@@ -1575,7 +1575,7 @@ GameObject:
   - component: {fileID: 438847369}
   - component: {fileID: 438847368}
   m_Layer: 5
-  m_Name: Other_Title (2)
+  m_Name: StZebra_Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1614,7 +1614,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Puffin\n Crossing\n"
+  m_Text: 'Staggered Zebra Crossing
+
+'
 --- !u!222 &438847369
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1986,6 +1988,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502367567}
   m_CullTransparentMesh: 1
+--- !u!1 &542197887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 542197888}
+  - component: {fileID: 542197889}
+  m_Layer: 5
+  m_Name: CrossingsButtons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &542197888
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542197887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1386846989}
+  - {fileID: 151483070}
+  - {fileID: 1784258407}
+  - {fileID: 1522891573}
+  - {fileID: 2078542654}
+  - {fileID: 1938279290}
+  m_Father: {fileID: 1002348998}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000030517578, y: -12.5}
+  m_SizeDelta: {x: 420.00006, y: 545}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!223 &542197889
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542197887}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &546604494
 GameObject:
   m_ObjectHideFlags: 0
@@ -3483,7 +3549,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Puffin\n Crossing\n"
+  m_Text: 'Puffin Crossing
+
+'
 --- !u!222 &889521680
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3906,12 +3974,7 @@ RectTransform:
   m_Children:
   - {fileID: 712282682}
   - {fileID: 902906897}
-  - {fileID: 1386846989}
-  - {fileID: 151483070}
-  - {fileID: 1784258407}
-  - {fileID: 1522891573}
-  - {fileID: 2078542654}
-  - {fileID: 1938279290}
+  - {fileID: 542197888}
   m_Father: {fileID: 1577376540}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5277,12 +5340,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1187733310}
-  m_Father: {fileID: 1002348998}
-  m_RootOrder: 2
+  m_Father: {fileID: 542197888}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115, y: 185}
+  m_AnchoredPosition: {x: -115.00004, y: 197.5}
   m_SizeDelta: {x: 190, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1386846990
@@ -6013,12 +6076,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1152045436}
-  m_Father: {fileID: 1002348998}
-  m_RootOrder: 5
+  m_Father: {fileID: 542197888}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 115.00006, y: -10}
+  m_AnchoredPosition: {x: 115.00002, y: 2.499998}
   m_SizeDelta: {x: 190, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1522891574
@@ -7392,12 +7455,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 826263456}
-  m_Father: {fileID: 1002348998}
-  m_RootOrder: 4
+  m_Father: {fileID: 542197888}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115, y: -10}
+  m_AnchoredPosition: {x: -115.00004, y: 2.499998}
   m_SizeDelta: {x: 190, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1784258408
@@ -8199,12 +8262,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1662973369}
-  m_Father: {fileID: 1002348998}
-  m_RootOrder: 7
+  m_Father: {fileID: 542197888}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 115.00006, y: -210}
+  m_AnchoredPosition: {x: 115.00002, y: -197.5}
   m_SizeDelta: {x: 190, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938279291
@@ -9468,12 +9531,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1474793174}
-  m_Father: {fileID: 1002348998}
-  m_RootOrder: 6
+  m_Father: {fileID: 542197888}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115, y: -210}
+  m_AnchoredPosition: {x: -115.00004, y: -197.5}
   m_SizeDelta: {x: 190, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2078542655
