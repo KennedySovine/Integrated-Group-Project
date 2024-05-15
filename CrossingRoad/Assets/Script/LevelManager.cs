@@ -145,9 +145,28 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public void Reset(){
+        lookedLeft = false;
+        lookedRight = false;
+        spacePressed = false;
+        isMoving = false;
+        isCrossing = false;
+    }
+
+    public void newPC(GameObject newpc){
+        Destroy(GameObject.Find("PC"));
+        newpc.SetActive(true);
+        cameras[0] = GameObject.Find("lookLeft1").GetComponent<Camera>();
+        cameras[1] = GameObject.Find("MC").GetComponent<Camera>();
+        cameras[2] = GameObject.Find("lookRight1").GetComponent<Camera>();
+
+        cameras[0].enabled = false;
+        cameras[2].enabled = false;
+    }
+
     public void RestartScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     IEnumerator CheckMessage()
     {

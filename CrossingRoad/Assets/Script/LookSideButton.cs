@@ -22,6 +22,13 @@ public class LookSideButton : MonoBehaviour
                 button.interactable = false;
             }
         }
+        else if (button != null && !button.interactable)
+        {
+            if (!LM.isMoving)
+            {
+                button.interactable = true;
+            }
+        }
     }
 
     public void LookLeft()
