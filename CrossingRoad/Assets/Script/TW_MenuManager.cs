@@ -22,6 +22,13 @@ public class TW_MenuManager : MonoBehaviour
         }
 
         DisableLevels();
+
+        GameObject.Find("EventSystem").transform.SetParent(GameObject.Find("UI").transform);
+    }
+
+    void Update()
+    {
+        
     }
 
     private void DisableLevels()

@@ -14,6 +14,7 @@ public class gameManager : MonoBehaviour
     private GameObject pauseMenu;
     public GameObject optionsMenu;
     public GameObject UI;
+    private GameObject eventSystem;
 
     private void Awake()
     {
@@ -43,21 +44,8 @@ public class gameManager : MonoBehaviour
         {
             UI = GameObject.Find("UI");
         }
-
-        if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 7)
-        {
-            pauseMenu.SetActive(!pauseMenu.activeSelf);
-            UI.SetActive(!pauseMenu.activeSelf);
-        }
-
-        if (pauseMenu.activeSelf)
-        {
-            Time.timeScale = 0;
-        }
-        else
-        {
-            Time.timeScale = 1;
-        }
+        
+        pauseGame();
     }
 
     public void loadNextScene()
@@ -79,6 +67,26 @@ public class gameManager : MonoBehaviour
         }
         else{
             menu.SetActive(true);
+        }
+    }
+
+    public void pauseGame(){
+        if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 7)
+        {
+            eventSystem = GameObject.Find("EventSystem");
+            pauseMenu.SetActive(!pauseMenu.activeSelf);
+            UI.SetActive(!pauseMenu.activeSelf);
+        }
+
+        if (pauseMenu.activeSelf)
+        {
+            eventSystem.transform.SetParent(GameObject.Find("OPTIONSANDPM").transform);
+            Time.timeScale = 0;
+        }
+        else
+        {
+            eventSystem.transform.SetParent(GameObject.Find("UI").transform);
+            Time.timeScale = 1;
         }
     }
 
