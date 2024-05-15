@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MenuScene.unity
+    guid: b3cec6d8ac52a0b48a429e355285a62b
+  - enabled: 1
     path: Assets/Scenes/ZebraNoCar.unity
     guid: e9450e99a93bd4489bf86f39b996bdff
   - enabled: 1
@@ -26,7 +29,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StaggeredPelican.unity
     guid: d2faa33411dd14e82be3c1cff47b8042
-  - enabled: 1
-    path: Assets/Scenes/MenuScene.unity
-    guid: b3cec6d8ac52a0b48a429e355285a62b
   m_configObjects: {}
