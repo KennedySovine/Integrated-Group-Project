@@ -24,12 +24,13 @@ public class TW_MenuManager : MonoBehaviour
             Debug.Log(completedScenes);
         }
 
+        DisableLevels();
+
     }
 
     void OnEnable()
     {
         Time.timeScale = 1;
-        DisableLevels();
     }
 
     void Update()

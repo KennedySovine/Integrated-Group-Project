@@ -64,8 +64,7 @@ public class LevelManager : MonoBehaviour
                 cameras[1].enabled = true;
             }
         }
-        else
-        {
+
             if (camNumCurrent == 0)
             {
                 lookedLeft = true;
@@ -75,7 +74,6 @@ public class LevelManager : MonoBehaviour
             {
                 lookedRight = true;
             }
-        }
     }
 
 //check if the player has looked left and right
@@ -125,6 +123,7 @@ public class LevelManager : MonoBehaviour
         {
             return;
         }   
+
         //Car on the left
         if (carSpawns[0] == null)
         {
