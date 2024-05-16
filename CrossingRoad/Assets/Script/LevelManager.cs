@@ -64,15 +64,17 @@ public class LevelManager : MonoBehaviour
                 cameras[1].enabled = true;
             }
         }
-
-        if (camNumCurrent == 0)
+        else
         {
-            lookedLeft = true;
-        }
+            if (camNumCurrent == 0)
+            {
+                lookedLeft = true;
+            }
 
-        if (camNumCurrent == 2)
-        {
-            lookedRight = true;
+            if (camNumCurrent == 2)
+            {
+                lookedRight = true;
+            }
         }
     }
 
@@ -118,10 +120,14 @@ public class LevelManager : MonoBehaviour
 
     public void spawnCar(){
         int carNum;
+
+        if (carSpawns.Length == 0)
+        {
+            return;
+        }   
         //Car on the left
         if (carSpawns[0] == null)
         {
-        
             carNum = Random.Range(0, 3);
             carSpawns[0] = Instantiate(car[carNum], new Vector3 (-145, 3, 17.68f), Quaternion.identity);
             if (carNum == 1) {

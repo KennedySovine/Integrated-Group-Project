@@ -10,6 +10,8 @@ public class TW_MenuManager : MonoBehaviour
 
     public GameObject[] levels = new GameObject[7];
 
+
+
     void Start()
     {
         if (!PlayerPrefs.HasKey("completedScenes"))
@@ -19,17 +21,17 @@ public class TW_MenuManager : MonoBehaviour
 
         else{
             completedScenes = PlayerPrefs.GetInt("completedScenes");
+            Debug.Log(completedScenes);
         }
 
         DisableLevels();
-
-        GameObject.Find("EventSystem").transform.SetParent(GameObject.Find("UI").transform);
     }
 
     void Update()
     {
-        
+
     }
+    
 
     private void DisableLevels()
     {
