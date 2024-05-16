@@ -105,15 +105,17 @@ public class LevelManager : MonoBehaviour
             cameras[camNumCurrent].enabled = true;
             return;
         }
+        else{
 
-        if (camNumCurrent == 0)
-        {
-            return;
+            if (camNumCurrent == 0)
+            {
+                return;
+            }
+
+            cameras[camNumCurrent].enabled = false;
+            camNumCurrent--;
+            cameras[camNumCurrent].enabled = true;
         }
-
-        cameras[camNumCurrent].enabled = false;
-        camNumCurrent--;
-        cameras[camNumCurrent].enabled = true;
     }
 
     public void spawnCar(){
