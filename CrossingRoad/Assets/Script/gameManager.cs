@@ -60,10 +60,6 @@ public class gameManager : MonoBehaviour
     public void loadSelectedScene(int sceneIndex)
     {
         SceneManager.LoadScene(sceneBuildIndex: sceneIndex); // Loads the scene with the index passed in
-        if (eventSystem != null)
-        {
-            Destroy(eventSystem);
-        }
     }
 
     public void goBack(GameObject menu){

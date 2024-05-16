@@ -24,6 +24,11 @@ public class TW_MenuManager : MonoBehaviour
             Debug.Log(completedScenes);
         }
 
+    }
+
+    void OnEnable()
+    {
+        Time.timeScale = 1;
         DisableLevels();
     }
 
@@ -32,6 +37,10 @@ public class TW_MenuManager : MonoBehaviour
 
     }
     
+    public void loadSelectedScene(int sceneIndex)
+    {
+        SceneManager.LoadScene(sceneBuildIndex: sceneIndex); // Loads the scene with the index passed in
+    }
 
     private void DisableLevels()
     {
