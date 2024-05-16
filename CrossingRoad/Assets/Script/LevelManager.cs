@@ -15,6 +15,8 @@ public class LevelManager : MonoBehaviour
     public bool spacePressed = false;
     public bool isMoving = false;
 
+    public bool carsStop = true;
+
     public bool isCrossing = false;
 
     public int TimeForCrossing = 10; //Time it takes for the lights to change
@@ -35,9 +37,6 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cameras[0] = GameObject.Find("lookLeft").GetComponent<Camera>();
-        cameras[1] = Camera.main;
-        cameras[2] = GameObject.Find("lookRight").GetComponent<Camera>();
 
         cameras[0].enabled = false;
         cameras[2].enabled = false;
@@ -137,6 +136,9 @@ public class LevelManager : MonoBehaviour
             else {
                 carSpawns[0].transform.Rotate(0, 90, 0);
             }
+            if (!carsStop){
+                carSpawns[0].GetComponent<CarMovingForward>().stop = false;
+            }
         }
 
         if (carSpawns[1] == null){
@@ -148,6 +150,10 @@ public class LevelManager : MonoBehaviour
             } 
             else {
                 carSpawns[1].transform.Rotate(0, -90, 0);
+            }
+
+            if (!carsStop){
+                carSpawns[1].GetComponent<CarMovingForward>().stop = false;
             }
         }
     }

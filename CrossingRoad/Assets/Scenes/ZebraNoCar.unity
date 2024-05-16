@@ -499,8 +499,8 @@ Transform:
   m_LocalScale: {x: 1.1149, y: 1.1149, z: 1.1149}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1616240919}
   - {fileID: 1632141780}
+  - {fileID: 1616240919}
   - {fileID: 29921899}
   - {fileID: 7314207}
   m_Father: {fileID: 0}
@@ -1602,9 +1602,9 @@ MonoBehaviour:
   isCrossing: 0
   TimeForCrossing: 10
   cameras:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 29921901}
+  - {fileID: 1616240918}
+  - {fileID: 7314209}
   popUp: {fileID: 1892043123}
   popUpText: {fileID: 593059224}
   car:
@@ -1772,7 +1772,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 210537637}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 1.921, y: 0, z: 0}
 --- !u!1 &1632141779
 GameObject:
@@ -1808,7 +1808,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 210537637}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1632141781
 CapsuleCollider:

@@ -945,7 +945,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 134863285}
         m_TargetAssemblyTypeName: LookSideButton, Assembly-CSharp
         m_MethodName: LookRight
         m_Mode: 1
@@ -1446,12 +1446,13 @@ MonoBehaviour:
   mustCheck: 1
   spacePressed: 0
   isMoving: 0
+  carsStop: 0
   isCrossing: 0
   TimeForCrossing: 10
   cameras:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 29921901}
+  - {fileID: 1616240918}
+  - {fileID: 7314209}
   popUp: {fileID: 1892043123}
   popUpText: {fileID: 593059224}
   car:
@@ -2248,7 +2249,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 134863285}
         m_TargetAssemblyTypeName: LookSideButton, Assembly-CSharp
         m_MethodName: LookLeft
         m_Mode: 1

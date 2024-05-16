@@ -7,6 +7,7 @@ public class CarMovingForward : MonoBehaviour
     private LevelManager levelManager;
     private int stopDistance = 15;
     public float maxSpeed = 20;
+    public bool stop = true;
     private float currentSpeed = 0;
     private float acceleration = 0.01f;
 
@@ -22,7 +23,7 @@ public class CarMovingForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (stop){
         //If a zebra light
         if (trafficLight.GetComponent<LightControl>() == null){
             if (levelManager.requirementsMet() || levelManager.isCrossing){
@@ -64,12 +65,14 @@ public class CarMovingForward : MonoBehaviour
                 currentSpeed += acceleration;
             }
         }
+        }
         transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
 
         if (transform.position.x > 150 || transform.position.x < -150)
         {
             Destroy(gameObject);
         }
+        
 
     }
 

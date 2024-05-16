@@ -434,7 +434,6 @@ GameObject:
   - component: {fileID: 99054199}
   - component: {fileID: 99054198}
   - component: {fileID: 99054197}
-  - component: {fileID: 99054196}
   m_Layer: 5
   m_Name: Right_Arrow
   m_TagString: Arrow
@@ -462,18 +461,6 @@ RectTransform:
   m_AnchoredPosition: {x: -200, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &99054196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 99054194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf0185cbeb5f84a8a96ce63c3cba5fd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &99054197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +505,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 134863285}
         m_TargetAssemblyTypeName: LookSideButton, Assembly-CSharp
         m_MethodName: LookRight
         m_Mode: 1
@@ -1626,7 +1613,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 134863285}
         m_TargetAssemblyTypeName: LookSideButton, Assembly-CSharp
         m_MethodName: LookLeft
         m_Mode: 1
@@ -1820,12 +1807,13 @@ MonoBehaviour:
   mustCheck: 1
   spacePressed: 0
   isMoving: 0
+  carsStop: 1
   isCrossing: 0
   TimeForCrossing: 10
   cameras:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 29921901}
+  - {fileID: 1616240918}
+  - {fileID: 7314209}
   popUp: {fileID: 1892043123}
   popUpText: {fileID: 593059224}
   car:
