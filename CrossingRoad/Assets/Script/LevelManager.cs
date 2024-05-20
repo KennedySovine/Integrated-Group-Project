@@ -54,6 +54,13 @@ public class LevelManager : MonoBehaviour
     {
         spawnCar();
 
+        if (Input.GetKeyDown("left")){
+            changeCamera(false);
+        }
+        else if (Input.GetKeyDown("right")){
+            changeCamera(true);
+        }
+
         if (!gameObject.GetComponent<ScrollingText>().enabled)
         {
             tutorialPanel.SetActive(false);
@@ -104,6 +111,7 @@ public class LevelManager : MonoBehaviour
 //change the camera view
     public void changeCamera(bool side) // True = turn right False = turn left
     {
+        Debug.Log(side);
         if (side)
         {
             if (camNumCurrent == 2)

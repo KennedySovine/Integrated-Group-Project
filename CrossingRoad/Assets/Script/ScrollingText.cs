@@ -12,7 +12,7 @@ public class ScrollingText : MonoBehaviour
 
     [Header("UI Elements")]
     [SerializeField] private TextMeshProUGUI itemInfoText;
-    private int currentDisplayingTextIndex = 0;
+    public int currentDisplayingTextIndex = 0;
     
     IEnumerator currentCoroutine;
     //private bool lastTextDisplayed = false;
