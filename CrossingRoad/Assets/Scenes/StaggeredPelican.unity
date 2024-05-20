@@ -2230,9 +2230,9 @@ MonoBehaviour:
   - {fileID: 29921901}
   - {fileID: 1616240918}
   - {fileID: 7314209}
-  popUp: {fileID: 0}
-  popUpText: {fileID: 0}
-  tutorialPanel: {fileID: 0}
+  popUp: {fileID: 480147907}
+  popUpText: {fileID: 2001768099}
+  tutorialPanel: {fileID: 2056596575}
   car:
   - {fileID: 8175777677330807124, guid: 6613c1012aff1439081c4343e44c3c8b, type: 3}
   - {fileID: 3199912525029752954, guid: 6066fc000d67e438f899557f84258227, type: 3}
@@ -2326,10 +2326,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6dc1c8ae9a04c2db033191d84fce0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemInfo: []
-  finishButton: {fileID: 0}
+  itemInfo:
+  - Welcome to the last crossing you will learn. This is a 'Staggered Pelican Crossing'.
+  - The rules are the same as a regular pelican crossing, but with the adition of
+    the island in the middle.
+  - Combine your knowledge of the staggered zebra crossing and the regular pelican
+    crossing to complete this level!
+  finishButton: {fileID: 1541721502}
   scrollSpeed: 0.1
-  itemInfoText: {fileID: 0}
+  itemInfoText: {fileID: 132159746}
   currentDisplayingTextIndex: 0
 --- !u!1 &1616240916
 GameObject:
@@ -3072,8 +3077,8 @@ GameObject:
   - component: {fileID: 1926136108}
   - component: {fileID: 1926136107}
   - component: {fileID: 1926136106}
-  - component: {fileID: 1926136105}
   - component: {fileID: 1926136110}
+  - component: {fileID: 1926136111}
   m_Layer: 0
   m_Name: EndPoint
   m_TagString: Untagged
@@ -3081,18 +3086,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1926136105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926136104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 258e0f5d9061249c097289504443cab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1926136106
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3164,7 +3157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926136104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.23, y: 1.47, z: 26.26}
+  m_LocalPosition: {x: 4.23, y: 1.47, z: 27.407}
   m_LocalScale: {x: 2.131566, y: 2.131566, z: 2.131566}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3187,6 +3180,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1926136111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926136104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878bfbafc3c7545e68817c24f0aa3c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemInfo:
+  - Congratulations! You have finished learning all of the levels. Now, go out there
+    and make sure to put the skills you've learned here to use!
+  scrollSpeed: 0.1
+  tutorialPanel: {fileID: 2056596575}
+  itemInfoText: {fileID: 132159746}
+  currentDisplayingTextIndex: 0
 --- !u!1 &2001768097
 GameObject:
   m_ObjectHideFlags: 0
