@@ -1297,7 +1297,7 @@ RectTransform:
   m_GameObject: {fileID: 1224640595}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.20056142, y: 0.20056142, z: 0.20056142}
+  m_LocalScale: {x: 0.15801632, y: 0.15801632, z: 0.15801632}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1932758632}
@@ -1306,7 +1306,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -25, y: -84}
+  m_AnchoredPosition: {x: -16.3, y: -84}
   m_SizeDelta: {x: 1367, y: 769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1232302821
@@ -1633,9 +1633,9 @@ MonoBehaviour:
   - {fileID: 29921901}
   - {fileID: 1616240918}
   - {fileID: 7314209}
-  popUp: {fileID: 0}
-  popUpText: {fileID: 0}
-  tutorialPanel: {fileID: 0}
+  popUp: {fileID: 1224640595}
+  popUpText: {fileID: 1932758633}
+  tutorialPanel: {fileID: 1945448097}
   car:
   - {fileID: 8175777677330807124, guid: 6613c1012aff1439081c4343e44c3c8b, type: 3}
   - {fileID: 3199912525029752954, guid: 6066fc000d67e438f899557f84258227, type: 3}
@@ -1733,10 +1733,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6dc1c8ae9a04c2db033191d84fce0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemInfo: []
-  finishButton: {fileID: 0}
-  scrollSpeed: 0.1
-  itemInfoText: {fileID: 0}
+  itemInfo:
+  - Excellent job navigating the cars!
+  - Now, remember when I said good drivers will stop at the crossing for people to
+    cross?
+  - Unfotunately, some drivers are bad at driving and do not stop for people trying
+    to cross.
+  - This level, use your skills of looking left and right to ensure no cars are coming
+    before you decide to cross.
+  finishButton: {fileID: 206455448}
+  scrollSpeed: 0.05
+  itemInfoText: {fileID: 231859971}
+  currentDisplayingTextIndex: 0
 --- !u!1 &1616240916
 GameObject:
   m_ObjectHideFlags: 0

@@ -617,6 +617,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1557400533}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1557400532}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1557400534}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &180766074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,6 +1093,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8d6d7d55bf0342f9b1dab9cf7822207, type: 3}
+--- !u!1 &472776060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 472776063}
+  - component: {fileID: 472776062}
+  - component: {fileID: 472776061}
+  m_Layer: 0
+  m_Name: showLight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &472776061
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472776060}
+  m_Enabled: 1
+--- !u!20 &472776062
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472776060}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 96.12405
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &472776063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472776060}
+  m_LocalRotation: {x: -0, y: 0.8469094, z: -0, w: 0.5317372}
+  m_LocalPosition: {x: -8.836, y: 7.88, z: 25.407}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 115.754, z: 0}
 --- !u!1 &539239813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,7 +1336,7 @@ RectTransform:
   m_GameObject: {fileID: 595867486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.20056142, y: 0.20056142, z: 0.20056142}
+  m_LocalScale: {x: 0.15801632, y: 0.15801632, z: 0.15801632}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 810185947}
@@ -1225,7 +1345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -25, y: -84}
+  m_AnchoredPosition: {x: -16.3, y: -84}
   m_SizeDelta: {x: 1367, y: 769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &664625591
@@ -1479,6 +1599,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865277531}
   m_CullTransparentMesh: 1
+--- !u!1 &918249708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 918249711}
+  - component: {fileID: 918249710}
+  - component: {fileID: 918249709}
+  m_Layer: 0
+  m_Name: asideCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &918249709
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918249708}
+  m_Enabled: 1
+--- !u!20 &918249710
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918249708}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 107.74748
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &918249711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918249708}
+  m_LocalRotation: {x: -0, y: 0.941691, z: -0, w: 0.33647904}
+  m_LocalPosition: {x: 4.45, y: 4.12, z: 1.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 140.675, z: 0}
 --- !u!1001 &1179480694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1765,6 +1969,9 @@ GameObject:
   - component: {fileID: 1557400528}
   - component: {fileID: 1557400530}
   - component: {fileID: 1557400531}
+  - component: {fileID: 1557400533}
+  - component: {fileID: 1557400532}
+  - component: {fileID: 1557400534}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -1796,9 +2003,9 @@ MonoBehaviour:
   - {fileID: 29921901}
   - {fileID: 1616240918}
   - {fileID: 7314209}
-  popUp: {fileID: 0}
-  popUpText: {fileID: 0}
-  tutorialPanel: {fileID: 0}
+  popUp: {fileID: 595867486}
+  popUpText: {fileID: 810185948}
+  tutorialPanel: {fileID: 189137059}
   car:
   - {fileID: 8175777677330807124, guid: 6613c1012aff1439081c4343e44c3c8b, type: 3}
   - {fileID: 3199912525029752954, guid: 6066fc000d67e438f899557f84258227, type: 3}
@@ -1896,10 +2103,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6dc1c8ae9a04c2db033191d84fce0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemInfo: []
-  finishButton: {fileID: 0}
-  scrollSpeed: 0.1
-  itemInfoText: {fileID: 0}
+  itemInfo:
+  - Great job learning on how to navigate Zebra Crossings! Now, you will learn the
+    next 2 crossings that you will encounter.
+  - This crossing is called a 'Pelican Crossing'. There are 2 main differences between
+    this crossing and the zebra crossings.
+  - The first is that there is a light pattern for cars to follow.
+  - A green light means the cars are allowed to go. An amber light means that they
+    must prepare to stop. A red right means they must stop. Lastly, a red and amber
+    light means they are preparing to go.
+  - The best practice is to never begin crossing unless the light is green for the
+    cars. Luckily, you do not need to check the traffic lights to know when to cross.
+  - There are two indicators for when you should cross. First, is the light across
+    the street from you. This light will show a green man when you can cross, and
+    a red man when you cannot.
+  - These crossings will have either the green man start to flash or an amber man
+    appear when you should not begin to cross. This means that the cars are about
+    to start moving soon.
+  - 'Second is a light control that will be next to you. Usually, you can press the
+    button that is on this control when the light is red to get the light to change
+    to green sooner. '
+  - For the sake of learning, the button will be pressed whenever the light is red,
+    so theres no need to worry.
+  - Make sure to check both sides of the road as usual to navigate this crossing.
+  finishButton: {fileID: 180766071}
+  scrollSpeed: 0.05
+  itemInfoText: {fileID: 865277533}
+  currentDisplayingTextIndex: 0
+--- !u!114 &1557400532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557400527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec6a0e60284f40c68eb6160d46bd923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Light: {fileID: 918249710}
+  scrollingText: {fileID: 0}
+  startTextIndex: 7
+  endTextIndex: 8
+--- !u!114 &1557400533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557400527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec6a0e60284f40c68eb6160d46bd923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Light: {fileID: 1712448067}
+  scrollingText: {fileID: 0}
+  startTextIndex: 5
+  endTextIndex: 7
+--- !u!114 &1557400534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557400527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec6a0e60284f40c68eb6160d46bd923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Light: {fileID: 472776062}
+  scrollingText: {fileID: 0}
+  startTextIndex: 2
+  endTextIndex: 5
 --- !u!1 &1616240916
 GameObject:
   m_ObjectHideFlags: 0
@@ -2112,6 +2390,90 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599430f23944b4e4098468bb023fa74f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1712448065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1712448068}
+  - component: {fileID: 1712448067}
+  - component: {fileID: 1712448066}
+  m_Layer: 0
+  m_Name: acrossLightCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1712448066
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712448065}
+  m_Enabled: 1
+--- !u!20 &1712448067
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712448065}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 99.30344
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1712448068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712448065}
+  m_LocalRotation: {x: -0, y: -0.3155502, z: -0, w: 0.9489089}
+  m_LocalPosition: {x: -2.46, y: 7.43, z: 22.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: -36.788, z: 0}
 --- !u!1 &1794486531
 GameObject:
   m_ObjectHideFlags: 0

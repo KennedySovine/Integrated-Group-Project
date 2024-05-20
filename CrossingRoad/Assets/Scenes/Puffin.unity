@@ -1498,6 +1498,7 @@ MonoBehaviour:
   finishButton: {fileID: 0}
   scrollSpeed: 0.1
   itemInfoText: {fileID: 0}
+  currentDisplayingTextIndex: 0
 --- !u!1 &1616240916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,7 +1648,7 @@ RectTransform:
   m_GameObject: {fileID: 1627282401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.20056142, y: 0.20056142, z: 0.20056142}
+  m_LocalScale: {x: 0.15801632, y: 0.15801632, z: 0.15801632}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1859152611}
@@ -1656,7 +1657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -25, y: -84}
+  m_AnchoredPosition: {x: -16.3, y: -84}
   m_SizeDelta: {x: 1367, y: 769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1632141779
