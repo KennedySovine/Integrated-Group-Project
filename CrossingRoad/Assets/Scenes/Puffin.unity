@@ -1394,9 +1394,9 @@ MonoBehaviour:
   - {fileID: 29921901}
   - {fileID: 1616240918}
   - {fileID: 7314209}
-  popUp: {fileID: 0}
-  popUpText: {fileID: 0}
-  tutorialPanel: {fileID: 0}
+  popUp: {fileID: 1627282401}
+  popUpText: {fileID: 1859152612}
+  tutorialPanel: {fileID: 454751914}
   car:
   - {fileID: 8175777677330807124, guid: 6613c1012aff1439081c4343e44c3c8b, type: 3}
   - {fileID: 3199912525029752954, guid: 6066fc000d67e438f899557f84258227, type: 3}
@@ -1494,10 +1494,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6dc1c8ae9a04c2db033191d84fce0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemInfo: []
-  finishButton: {fileID: 0}
-  scrollSpeed: 0.1
-  itemInfoText: {fileID: 0}
+  itemInfo:
+  - The final unique crossing you will learn is the Puffin Crossing.
+  - Puffin crossings are very similar to pelican crossings. The only difference is
+    that there is an automatic sensor to detect people rather than a button.
+  - Cross this road like you did with the pelican crossing. You've got this!
+  finishButton: {fileID: 1972587682}
+  scrollSpeed: 0.05
+  itemInfoText: {fileID: 1954763462}
   currentDisplayingTextIndex: 0
 --- !u!1 &1616240916
 GameObject:
