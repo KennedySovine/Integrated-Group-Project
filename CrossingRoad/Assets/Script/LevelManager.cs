@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
 
 [Header("Car Paremeters")]
     public GameObject[] car = new GameObject[3];
-    public GameObject[] carSpawns = new GameObject[2];
+    public GameObject[] carSpawns = new GameObject[4];
 
     // Start is called before the first frame update
     void Start()
