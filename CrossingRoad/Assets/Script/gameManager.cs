@@ -94,4 +94,9 @@ public class gameManager : MonoBehaviour
         }
     }
 
+    public void quitGame()
+    {
+        Application.Quit();
+    }
+
 }
