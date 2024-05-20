@@ -2000,10 +2000,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemInfo:
-  - Test message 1
-  - Test message 2
+  - 'Welcome to "Crossing Roads: Learn how to Cross the Road".'
+  - In this game, you will learn how to navigate the 3 main pedestrian crossings
+    and their variations that are in the United Kingdom.
+  - "Firstly, the controls:\n - [Space] Advance the text/Cross the Road\n- [Arrow
+    Keys/Arrows on the Sides] Look eithft or right to check the street"
+  - '- [Arrow Keys/Arrows on the Sides] Look either left or right to check for oncoming
+    cars'
+  - 
+  - 
   finishButton: {fileID: 814545267}
-  scrollSpeed: 0.1
+  scrollSpeed: 0.05
   itemInfoText: {fileID: 1254810859}
 --- !u!1 &1616240916
 GameObject:
