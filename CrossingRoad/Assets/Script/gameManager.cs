@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class gameManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class gameManager : MonoBehaviour
     public GameObject optionsMenu;
     public GameObject UI;
     private GameObject eventSystem;
+    private OPTIONSANDPM options;
 
     private void Awake()
     {
@@ -37,6 +39,9 @@ public class gameManager : MonoBehaviour
         pauseMenu.SetActive(false);
         UI = null;
         eventSystem = GameObject.Find("EventSystem");
+        options = OPTIONSANDPM.Instance;
+
+        options.LoadSettings();
     }
 
     // Update is called once per frame
@@ -46,6 +51,9 @@ public class gameManager : MonoBehaviour
         {
             UI = GameObject.Find("UI");
         }
+
+        //Changes between windowed and fullscreen
+        options.fullscreen = Screen.fullScreen;
         
         pauseGame();
         
@@ -97,6 +105,16 @@ public class gameManager : MonoBehaviour
     public void quitGame()
     {
         Application.Quit();
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        //Dyslexia Friendly Set
+        Text[] texts = GameObject.FindObjectsOfType<Text>();
+        foreach (Text text in texts)
+        {
+            text.font = options.dyslexiaFriendly ? Resources.Load<Font>("OpenDyslexic-Regular") : Resources.GetBuiltinResource<Font>("Arial.ttf");
+        }
     }
 
 }

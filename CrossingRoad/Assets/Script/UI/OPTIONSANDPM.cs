@@ -39,4 +39,21 @@ public class OPTIONSANDPM : MonoBehaviour
         PlayerPrefs.SetInt("dyslexiaFriendly", dyslexiaFriendly ? 1 : 0);
         PlayerPrefs.Save();
     }
+
+    public void SetFullscreen(bool isFullscreen){
+        fullscreen = isFullscreen;
+        Screen.fullScreen = fullscreen;
+    }
+    public void SetMasterVolume(float volume){
+        masterVolume = volume;
+    }
+    public void SetMusicVolume(float volume){
+        musicVolume = volume;
+    }
+    public void SetSFXVolume(float volume){
+        sfxVolume = volume;
+    }
+    public void SetDyslexiaFriendly(bool isDyslexiaFriendly){
+        dyslexiaFriendly = isDyslexiaFriendly;
+    }
 }

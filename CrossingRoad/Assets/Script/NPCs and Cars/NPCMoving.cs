@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class NPCMoving : MonoBehaviour
 {
-
-    public int xStart;
-    private Vector3 startingPosition;
     public bool reverse;
 
-    public float speed = 2;
+    public float speed;
+
+    private NPCManager npcmanager;
+
+
+
+    public int minX;
+    public int maxX;
 
     private void Start()
     {
-        startingPosition = transform.position;
-        startingPosition.x = xStart;
+        npcmanager = GameObject.Find("LevelManager").GetComponent<NPCManager>();
+
     }
 
     // Update is called once per frame
@@ -22,19 +26,19 @@ public class NPCMoving : MonoBehaviour
     {
         if (reverse)
         {
-            if (transform.position.x <= -18)
+            if (transform.position.x <= minX)
             {
-                transform.position = startingPosition;
+                gameObject.SetActive(false);
             }
         }
         else
         {
-            if (transform.position.x >= 15)
+            if (transform.position.x >= maxX)
             {
-                transform.position = startingPosition;
+                gameObject.SetActive(false);
             }
         }
 
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 }

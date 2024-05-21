@@ -1,26 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VolumeConvert : MonoBehaviour
 {
     public Text volumeText;
+    public Slider slider;
 
-    // Update is called once per frame
-    public void UpdateVolume(float volume, string Type)
+    public float volumeAmount;
+
+    private OPTIONSANDPM options;
+
+    void Start()
+    {
+        options = OPTIONSANDPM.Instance;
+        slider = gameObject.GetComponent<Slider>();
+    }
+
+    void Update()
+    {
+        if (slider.value != volumeAmount)
+        {
+            volumeAmount = slider.value;
+            UpdateVolume(slider.value);
+        }
+    }
+
+    public void UpdateVolume(float volume)
     {
         volumeText.text = (volume * 100).ToString("0");
-        if (Type == "Master")
+
+        if (gameObject.name == "Master")
         {
-            OPTIONSANDPM.Instance.masterVolume = volume;
+            options.SetMasterVolume(volume);
         }
-        else if (Type == "Music")
+        else if (gameObject.name == "Music")
         {
-            OPTIONSANDPM.Instance.musicVolume = volume;
+            options.SetMusicVolume(volume);
         }
-        else if (Type == "SFX")
+        else if (gameObject.name == "SFX")
         {
-            OPTIONSANDPM.Instance.sfxVolume = volume;
+            options.SetSFXVolume(volume);
         }
     }
 }

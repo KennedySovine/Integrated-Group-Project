@@ -432,8 +432,9 @@ GameObject:
   m_Component:
   - component: {fileID: 79500464}
   - component: {fileID: 79500465}
+  - component: {fileID: 79500466}
   m_Layer: 5
-  m_Name: Sound Effects
+  m_Name: SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -515,6 +516,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &79500466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79500463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f8cc06b6668c4f889e56f724df90b0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeText: {fileID: 1312960451}
+  slider: {fileID: 0}
+  volumeAmount: 0
 --- !u!1 &141108431
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,15 +960,27 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1915756810}
   toggleTransition: 1
   graphic: {fileID: 1678735514}
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
-  m_IsOn: 1
+      m_Calls:
+      - m_Target: {fileID: 1195545249}
+        m_TargetAssemblyTypeName: OPTIONSANDPM, Assembly-CSharp
+        m_MethodName: SetDyslexiaFriendly
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 0
 --- !u!1 &219964719
 GameObject:
   m_ObjectHideFlags: 0
@@ -2101,6 +2129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 303257576}
   - component: {fileID: 303257577}
+  - component: {fileID: 303257578}
   m_Layer: 5
   m_Name: Music
   m_TagString: Untagged
@@ -2184,6 +2213,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &303257578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303257575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f8cc06b6668c4f889e56f724df90b0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeText: {fileID: 1091873468}
+  slider: {fileID: 0}
+  volumeAmount: 0
 --- !u!1 &331623627
 GameObject:
   m_ObjectHideFlags: 0
@@ -3527,8 +3571,9 @@ GameObject:
   m_Component:
   - component: {fileID: 507317700}
   - component: {fileID: 507317701}
+  - component: {fileID: 507317702}
   m_Layer: 5
-  m_Name: Volume
+  m_Name: Master
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3610,6 +3655,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &507317702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507317699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f8cc06b6668c4f889e56f724df90b0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeText: {fileID: 54595112}
+  slider: {fileID: 0}
+  volumeAmount: 0
 --- !u!1 &512459669
 GameObject:
   m_ObjectHideFlags: 0
@@ -9412,7 +9472,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1577376537
 MonoBehaviour:
   m_ObjectHideFlags: 0
