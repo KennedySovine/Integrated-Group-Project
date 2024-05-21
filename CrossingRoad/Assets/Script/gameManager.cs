@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Audio;
 
 public class gameManager : MonoBehaviour
 {
@@ -33,22 +34,20 @@ public class gameManager : MonoBehaviour
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
-        options = OPTIONSANDPM.Instance;
+        DontDestroyOnLoad(gameObject); 
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.DeleteAll();
         pauseMenu = GameObject.Find("PauseMenu");
         optionsMenu = GameObject.Find("Options_Panel");
         optionsMenu.SetActive(false);
         pauseMenu.SetActive(false);
         UI = null;
         eventSystem = GameObject.Find("EventSystem");
-
-        options.LoadSettings();
+        options = OPTIONSANDPM.Instance;
+        GetComponent<AudioSource>().Play();
     }
 
     // Update is called once per frame
@@ -57,12 +56,6 @@ public class gameManager : MonoBehaviour
         if (UI == null)
         {
             UI = GameObject.Find("UI");
-        }
-        if (PlayerPrefs.GetInt("fullscreen") == 1){
-            Screen.fullScreen = true;
-        }
-        else{
-            Screen.fullScreen = false;
         }
         
         setFont();
@@ -144,6 +137,13 @@ public class gameManager : MonoBehaviour
             }
 
         }
+    }
+
+    public void SetFullscreen(bool isFullscreen)
+    {
+        PlayerPrefs.SetInt("fullscreen", isFullscreen ? 1 : 0);
+        Screen.fullScreen = isFullscreen;
+        options.fullscreen = isFullscreen;
     }
 
 }

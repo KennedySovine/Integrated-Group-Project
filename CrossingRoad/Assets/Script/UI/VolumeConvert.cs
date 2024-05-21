@@ -29,19 +29,23 @@ public class VolumeConvert : MonoBehaviour
 
     public void UpdateVolume(float volume)
     {
-        volumeText.text = (volume * 100).ToString("0");
-
+        float normalizedVolume;
         if (gameObject.name == "Master")
         {
-            options.SetMasterVolume(volume);
+            normalizedVolume = ((volume - (-80)) / (5 - (-80))) * (100 - 0) + 0;
+            volumeText.text = normalizedVolume.ToString("0");
+            PlayerPrefs.SetFloat("masterVolume", volume);
         }
         else if (gameObject.name == "Music")
         {
-            options.SetMusicVolume(volume);
+            normalizedVolume = ((volume - (-80)) / (5 - (-80))) * (100 - 0) + 0;
+            volumeText.text = normalizedVolume.ToString("0");
+            PlayerPrefs.SetFloat("musicVolume", volume);
         }
         else if (gameObject.name == "SFX")
         {
-            options.SetSFXVolume(volume);
+            volumeText.text = volume.ToString("0");
+            PlayerPrefs.SetFloat("sfxVolume", volume);
         }
     }
 }

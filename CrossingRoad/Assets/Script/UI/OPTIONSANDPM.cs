@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+
 
 public class OPTIONSANDPM : MonoBehaviour
 {
@@ -11,6 +13,8 @@ public class OPTIONSANDPM : MonoBehaviour
     public float musicVolume;
     public float sfxVolume;
     public bool dyslexiaFriendly;
+
+    [SerializeField] private AudioMixer masterMixer;
 
     private void Awake()
     {
@@ -40,20 +44,15 @@ public class OPTIONSANDPM : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public void SetFullscreen(bool isFullscreen){
-        fullscreen = isFullscreen;
-        Screen.fullScreen = fullscreen;
+    public void MasterVolume(float volume)
+    {
+        PlayerPrefs.SetFloat("masterVolume", volume);
+        masterMixer.SetFloat("masterVol", volume);
     }
-    public void SetMasterVolume(float volume){
-        masterVolume = volume;
-    }
-    public void SetMusicVolume(float volume){
-        musicVolume = volume;
-    }
-    public void SetSFXVolume(float volume){
-        sfxVolume = volume;
-    }
-    public void SetDyslexiaFriendly(bool isDyslexiaFriendly){
-        dyslexiaFriendly = isDyslexiaFriendly;
+
+    public void MusicVolume(float volume)
+    {
+        PlayerPrefs.SetFloat("musicVolume", volume);
+        masterMixer.SetFloat("musicVol", volume);
     }
 }
