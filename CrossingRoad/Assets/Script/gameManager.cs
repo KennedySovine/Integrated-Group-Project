@@ -122,12 +122,22 @@ public class gameManager : MonoBehaviour
             {
                 text.font = dyslexicFont;
             }
+            TextMeshProUGUI[] texts2 = GameObject.FindObjectsOfType<TextMeshProUGUI>();
+            foreach (TextMeshProUGUI text in texts2)
+            {
+                text.font = dyslexicFontAsset;
+            }
         }
         else if (!options.dyslexiaFriendly){
             Text[] texts = GameObject.FindObjectsOfType<Text>();
             foreach (Text text in texts)
             {
                 text.font = normalFont;
+            }
+            TextMeshProUGUI[] texts2 = GameObject.FindObjectsOfType<TextMeshProUGUI>();
+            foreach (TextMeshProUGUI text in texts2)
+            {
+                text.font = normalFontAsset;
             }
 
         }

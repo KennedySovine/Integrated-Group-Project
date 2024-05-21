@@ -25,14 +25,14 @@ public class ScrollingText : MonoBehaviour
     }
 
     void Start() {
-        setFont();
+        //setFont();
         GM = gameManager.Instance;
         currentCoroutine = ScrollText();
         StartCoroutine(currentCoroutine);
     }
 
     void Update() {
-        setFont();
+        //setFont();
         if (currentDisplayingTextIndex == itemInfo.Length-1 && itemInfoText.text == itemInfo[currentDisplayingTextIndex]) {
             finishButton.SetActive(true);
         }
