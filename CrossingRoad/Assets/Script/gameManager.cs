@@ -12,7 +12,7 @@ public class gameManager : MonoBehaviour
     public int completedScenes;
 
     [Header("UI Elements")]
-    private GameObject pauseMenu;
+    [SerializeField] private GameObject pauseMenu;
     public GameObject optionsMenu;
     public GameObject UI;
     private GameObject eventSystem;
@@ -93,7 +93,7 @@ public class gameManager : MonoBehaviour
         optionsMenu.SetActive(false);
         if (SceneManager.GetActiveScene().buildIndex != 0)
         {
-            GameObject.Find("PauseMenu").SetActive(true);
+            pauseMenu.SetActive(true);
         }
         else{
 
