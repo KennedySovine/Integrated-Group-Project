@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    private gameManager GM;
 
 [Header("Crossing Parameters")]
     public bool lookedLeft = false;
@@ -41,6 +42,7 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
 
+        GM = gameManager.Instance;
         cameras[0].enabled = false;
         cameras[2].enabled = false;
 
@@ -52,9 +54,10 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         spawnCar();
 
-        if (!gameObject.GetComponent<ScrollingText>().enabled)
+        if (!gameObject.GetComponent<ScrollingText>().enabled || isMoving)
         {
             tutorialPanel.SetActive(false);
             if (Input.GetKeyDown("left")){

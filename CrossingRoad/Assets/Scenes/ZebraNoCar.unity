@@ -1340,10 +1340,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: HELLO
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c69d908464bb24c17b3344f26d392ef4, type: 2}
+  m_sharedMaterial: {fileID: 3929963667746530207, guid: c69d908464bb24c17b3344f26d392ef4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1694,8 +1694,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completedScenes: 0
+  pauseMenu: {fileID: 0}
   optionsMenu: {fileID: 0}
   UI: {fileID: 0}
+  dyslexicFont: {fileID: 0}
+  normalFont: {fileID: 0}
+  dyslexicFontAsset: {fileID: 0}
+  normalFontAsset: {fileID: 0}
 --- !u!4 &1421520142
 Transform:
   m_ObjectHideFlags: 0

@@ -10,12 +10,15 @@ public class NPCMoving : MonoBehaviour
 
     private NPCManager npcmanager;
 
+
+
     public int minX;
     public int maxX;
 
     private void Start()
     {
         npcmanager = GameObject.Find("LevelManager").GetComponent<NPCManager>();
+
     }
 
     // Update is called once per frame

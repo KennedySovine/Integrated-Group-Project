@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class gameManager : MonoBehaviour
 {
@@ -11,10 +13,17 @@ public class gameManager : MonoBehaviour
     public int completedScenes;
 
     [Header("UI Elements")]
-    private GameObject pauseMenu;
+    [SerializeField] private GameObject pauseMenu;
     public GameObject optionsMenu;
     public GameObject UI;
     private GameObject eventSystem;
+    private OPTIONSANDPM options;
+
+    [SerializeField] private Font dyslexicFont;
+    [SerializeField] private Font normalFont;
+    [SerializeField] public TMP_FontAsset dyslexicFontAsset;
+    [SerializeField] public TMP_FontAsset normalFontAsset;
+
 
     private void Awake()
     {
@@ -25,6 +34,7 @@ public class gameManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        options = OPTIONSANDPM.Instance;
     }
 
     // Start is called before the first frame update
@@ -37,6 +47,8 @@ public class gameManager : MonoBehaviour
         pauseMenu.SetActive(false);
         UI = null;
         eventSystem = GameObject.Find("EventSystem");
+
+        options.LoadSettings();
     }
 
     // Update is called once per frame
@@ -46,7 +58,14 @@ public class gameManager : MonoBehaviour
         {
             UI = GameObject.Find("UI");
         }
+        if (PlayerPrefs.GetInt("fullscreen") == 1){
+            Screen.fullScreen = true;
+        }
+        else{
+            Screen.fullScreen = false;
+        }
         
+        setFont();
         pauseGame();
         
     }
@@ -66,7 +85,7 @@ public class gameManager : MonoBehaviour
         optionsMenu.SetActive(false);
         if (SceneManager.GetActiveScene().buildIndex != 0)
         {
-            GameObject.Find("PauseMenu").SetActive(true);
+            pauseMenu.SetActive(true);
         }
         else{
 
@@ -97,6 +116,34 @@ public class gameManager : MonoBehaviour
     public void quitGame()
     {
         Application.Quit();
+    }
+
+    public void setFont(){
+        if (options.dyslexiaFriendly){
+            Text[] texts = GameObject.FindObjectsOfType<Text>();
+            foreach (Text text in texts)
+            {
+                text.font = dyslexicFont;
+            }
+            TextMeshProUGUI[] texts2 = GameObject.FindObjectsOfType<TextMeshProUGUI>();
+            foreach (TextMeshProUGUI text in texts2)
+            {
+                text.font = dyslexicFontAsset;
+            }
+        }
+        else if (!options.dyslexiaFriendly){
+            Text[] texts = GameObject.FindObjectsOfType<Text>();
+            foreach (Text text in texts)
+            {
+                text.font = normalFont;
+            }
+            TextMeshProUGUI[] texts2 = GameObject.FindObjectsOfType<TextMeshProUGUI>();
+            foreach (TextMeshProUGUI text in texts2)
+            {
+                text.font = normalFontAsset;
+            }
+
+        }
     }
 
 }
