@@ -16,13 +16,16 @@ public class ScrollingText : MonoBehaviour
     
     IEnumerator currentCoroutine;
     //private bool lastTextDisplayed = false;
+    private gameManager GM;
 
     void Start() {
+        GM = gameManager.Instance;
         currentCoroutine = ScrollText();
         StartCoroutine(currentCoroutine);
     }
 
     void Update() {
+        setFont();
         if (currentDisplayingTextIndex == itemInfo.Length-1 && itemInfoText.text == itemInfo[currentDisplayingTextIndex]) {
             finishButton.SetActive(true);
         }
@@ -55,6 +58,15 @@ public class ScrollingText : MonoBehaviour
         for (int i = 0; i <= itemInfo[currentDisplayingTextIndex].Length; i++) {
             itemInfoText.text = itemInfo[currentDisplayingTextIndex].Substring(0, i);
             yield return new WaitForSeconds(scrollSpeed);
+        }
+    }
+
+    private void setFont(){
+        if (PlayerPrefs.GetInt("dyslexicFriendly") == 1){
+            itemInfoText.font = GM.dyslexicFontAsset;
+        }
+        else{
+            itemInfoText.font = GM.normalFontAsset;
         }
     }
 

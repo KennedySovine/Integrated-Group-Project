@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class gameManager : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class gameManager : MonoBehaviour
 
     [SerializeField] private Font dyslexicFont;
     [SerializeField] private Font normalFont;
+    [SerializeField] public TMP_FontAsset dyslexicFontAsset;
+    [SerializeField] public TMP_FontAsset normalFontAsset;
 
 
     private void Awake()
@@ -45,6 +48,9 @@ public class gameManager : MonoBehaviour
         eventSystem = GameObject.Find("EventSystem");
         options = OPTIONSANDPM.Instance;
 
+        dyslexicFontAsset = Resources.Load<TMP_FontAsset>("Fonts/DyslexicFont");
+        normalFontAsset = Resources.Load<TMP_FontAsset>("Fonts/NormalFont");
+
         options.LoadSettings();
     }
 
@@ -59,21 +65,8 @@ public class gameManager : MonoBehaviour
         //Changes between windowed and fullscreen
         options.fullscreen = Screen.fullScreen;
         Debug.Log(options.dyslexiaFriendly);
-        if (options.dyslexiaFriendly){
-            Text[] texts = GameObject.FindObjectsOfType<Text>();
-            foreach (Text text in texts)
-            {
-                text.font = dyslexicFont;
-            }
-        }
-        else if (!options.dyslexiaFriendly){
-            Text[] texts = GameObject.FindObjectsOfType<Text>();
-            foreach (Text text in texts)
-            {
-                text.font = normalFont;
-            }
-        }
         
+        setFont();
         pauseGame();
         
     }
@@ -124,6 +117,24 @@ public class gameManager : MonoBehaviour
     public void quitGame()
     {
         Application.Quit();
+    }
+
+    public void setFont(){
+        if (options.dyslexiaFriendly){
+            Text[] texts = GameObject.FindObjectsOfType<Text>();
+            foreach (Text text in texts)
+            {
+                text.font = dyslexicFont;
+            }
+        }
+        else if (!options.dyslexiaFriendly){
+            Text[] texts = GameObject.FindObjectsOfType<Text>();
+            foreach (Text text in texts)
+            {
+                text.font = normalFont;
+            }
+
+        }
     }
 
 }

@@ -1694,8 +1694,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completedScenes: 0
+  pauseMenu: {fileID: 0}
   optionsMenu: {fileID: 0}
   UI: {fileID: 0}
+  dyslexicFont: {fileID: 0}
+  normalFont: {fileID: 0}
 --- !u!4 &1421520142
 Transform:
   m_ObjectHideFlags: 0
