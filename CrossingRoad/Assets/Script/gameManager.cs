@@ -48,9 +48,6 @@ public class gameManager : MonoBehaviour
         eventSystem = GameObject.Find("EventSystem");
         options = OPTIONSANDPM.Instance;
 
-        dyslexicFontAsset = Resources.Load<TMP_FontAsset>("Fonts/DyslexicFont");
-        normalFontAsset = Resources.Load<TMP_FontAsset>("Fonts/NormalFont");
-
         options.LoadSettings();
     }
 
@@ -64,7 +61,6 @@ public class gameManager : MonoBehaviour
 
         //Changes between windowed and fullscreen
         options.fullscreen = Screen.fullScreen;
-        Debug.Log(options.dyslexiaFriendly);
         
         setFont();
         pauseGame();

@@ -9,6 +9,7 @@ public class ScrollingText : MonoBehaviour
     [SerializeField] [TextArea] private string[] itemInfo;
     [SerializeField] private GameObject finishButton;
     public float scrollSpeed = 0.1f;
+    private OPTIONSANDPM options;
 
     [Header("UI Elements")]
     [SerializeField] private TextMeshProUGUI itemInfoText;
@@ -18,7 +19,13 @@ public class ScrollingText : MonoBehaviour
     //private bool lastTextDisplayed = false;
     private gameManager GM;
 
+    void Awake() {
+        GM = gameManager.Instance;
+        options = OPTIONSANDPM.Instance;
+    }
+
     void Start() {
+        setFont();
         GM = gameManager.Instance;
         currentCoroutine = ScrollText();
         StartCoroutine(currentCoroutine);
@@ -62,10 +69,10 @@ public class ScrollingText : MonoBehaviour
     }
 
     private void setFont(){
-        if (PlayerPrefs.GetInt("dyslexicFriendly") == 1){
+        if (options.dyslexiaFriendly){
             itemInfoText.font = GM.dyslexicFontAsset;
         }
-        else{
+        else if (!options.dyslexiaFriendly){
             itemInfoText.font = GM.normalFontAsset;
         }
     }
