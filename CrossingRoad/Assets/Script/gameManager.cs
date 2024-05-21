@@ -18,6 +18,10 @@ public class gameManager : MonoBehaviour
     private GameObject eventSystem;
     private OPTIONSANDPM options;
 
+    [SerializeField] private Font dyslexicFont;
+    [SerializeField] private Font normalFont;
+
+
     private void Awake()
     {
         if (Instance != null)
@@ -54,6 +58,21 @@ public class gameManager : MonoBehaviour
 
         //Changes between windowed and fullscreen
         options.fullscreen = Screen.fullScreen;
+        Debug.Log(options.dyslexiaFriendly);
+        if (options.dyslexiaFriendly){
+            Text[] texts = GameObject.FindObjectsOfType<Text>();
+            foreach (Text text in texts)
+            {
+                text.font = dyslexicFont;
+            }
+        }
+        else if (!options.dyslexiaFriendly){
+            Text[] texts = GameObject.FindObjectsOfType<Text>();
+            foreach (Text text in texts)
+            {
+                text.font = normalFont;
+            }
+        }
         
         pauseGame();
         
@@ -105,16 +124,6 @@ public class gameManager : MonoBehaviour
     public void quitGame()
     {
         Application.Quit();
-    }
-
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        //Dyslexia Friendly Set
-        Text[] texts = GameObject.FindObjectsOfType<Text>();
-        foreach (Text text in texts)
-        {
-            text.font = options.dyslexiaFriendly ? Resources.Load<Font>("OpenDyslexic-Regular") : Resources.GetBuiltinResource<Font>("Arial.ttf");
-        }
     }
 
 }
