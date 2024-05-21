@@ -1289,8 +1289,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 141108436}
-        m_TargetAssemblyTypeName: TW_MenuManager, Assembly-CSharp
+      - m_Target: {fileID: 361380718}
+        m_TargetAssemblyTypeName: gameManager, Assembly-CSharp
         m_MethodName: loadSelectedScene
         m_Mode: 3
         m_Arguments:
@@ -1654,14 +1654,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: b6a2de6ea022547e29370896539c7b97, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 5
+      - m_Target: {fileID: 361380718}
+        m_TargetAssemblyTypeName: gameManager, Assembly-CSharp
+        m_MethodName: loadSelectedScene
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 1
           m_BoolArgument: 0
@@ -2267,8 +2267,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 141108436}
-        m_TargetAssemblyTypeName: TW_MenuManager, Assembly-CSharp
+      - m_Target: {fileID: 361380718}
+        m_TargetAssemblyTypeName: gameManager, Assembly-CSharp
         m_MethodName: loadSelectedScene
         m_Mode: 3
         m_Arguments:
@@ -4696,7 +4696,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2531561667840491520, guid: 8998e8021a5854e19b4aa971175141d4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8998e8021a5854e19b4aa971175141d4, type: 3}
 --- !u!1 &733617261
 GameObject:
@@ -5440,7 +5441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 851176892}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: NPCs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7042,7 +7043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 761372106289130625, guid: 9360aad1b1025426f9fc896475712f43, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.503933
+      value: -8.04
       objectReference: {fileID: 0}
     - target: {fileID: 761372106289130625, guid: 9360aad1b1025426f9fc896475712f43, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7096,7 +7097,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: RIGHTWhiteShirt_0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 761372106289130626, guid: 9360aad1b1025426f9fc896475712f43, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9360aad1b1025426f9fc896475712f43, type: 3}
 --- !u!1 &1146679540
 GameObject:
@@ -8460,8 +8462,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 141108436}
-        m_TargetAssemblyTypeName: TW_MenuManager, Assembly-CSharp
+      - m_Target: {fileID: 361380718}
+        m_TargetAssemblyTypeName: gameManager, Assembly-CSharp
         m_MethodName: loadSelectedScene
         m_Mode: 3
         m_Arguments:
@@ -9982,8 +9984,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 141108436}
-        m_TargetAssemblyTypeName: TW_MenuManager, Assembly-CSharp
+      - m_Target: {fileID: 361380718}
+        m_TargetAssemblyTypeName: gameManager, Assembly-CSharp
         m_MethodName: loadSelectedScene
         m_Mode: 3
         m_Arguments:
@@ -10461,7 +10463,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: LEFTOrangeShirt_0 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6161081186725496612, guid: 62d685fdcf6d54164913bd751601997f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 62d685fdcf6d54164913bd751601997f, type: 3}
 --- !u!1 &1643955807
 GameObject:
@@ -11931,8 +11934,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 141108436}
-        m_TargetAssemblyTypeName: TW_MenuManager, Assembly-CSharp
+      - m_Target: {fileID: 361380718}
+        m_TargetAssemblyTypeName: gameManager, Assembly-CSharp
         m_MethodName: loadSelectedScene
         m_Mode: 3
         m_Arguments:
@@ -13713,8 +13716,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 141108436}
-        m_TargetAssemblyTypeName: TW_MenuManager, Assembly-CSharp
+      - m_Target: {fileID: 361380718}
+        m_TargetAssemblyTypeName: gameManager, Assembly-CSharp
         m_MethodName: loadSelectedScene
         m_Mode: 3
         m_Arguments:
