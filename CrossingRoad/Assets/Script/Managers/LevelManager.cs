@@ -57,7 +57,7 @@ public class LevelManager : MonoBehaviour
 
         spawnCar();
 
-        if (!gameObject.GetComponent<ScrollingText>().enabled)
+        if (!gameObject.GetComponent<ScrollingText>().enabled || isMoving)
         {
             tutorialPanel.SetActive(false);
             if (Input.GetKeyDown("left")){

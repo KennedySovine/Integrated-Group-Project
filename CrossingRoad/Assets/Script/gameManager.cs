@@ -34,6 +34,7 @@ public class gameManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        options = OPTIONSANDPM.Instance;
     }
 
     // Start is called before the first frame update
@@ -46,7 +47,6 @@ public class gameManager : MonoBehaviour
         pauseMenu.SetActive(false);
         UI = null;
         eventSystem = GameObject.Find("EventSystem");
-        options = OPTIONSANDPM.Instance;
 
         options.LoadSettings();
     }
@@ -58,9 +58,12 @@ public class gameManager : MonoBehaviour
         {
             UI = GameObject.Find("UI");
         }
-
-        //Changes between windowed and fullscreen
-        options.fullscreen = Screen.fullScreen;
+        if (PlayerPrefs.GetInt("fullscreen") == 1){
+            Screen.fullScreen = true;
+        }
+        else{
+            Screen.fullScreen = false;
+        }
         
         setFont();
         pauseGame();
