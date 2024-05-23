@@ -107,12 +107,6 @@ public class gameManager : MonoBehaviour
         }
     }
 
-    public void quitGame()
-    {
-        options.SaveSettings();
-        Application.Quit();
-    }
-
     public void setFont(){
         if (options.dyslexiaFriendly){
             Text[] texts = GameObject.FindObjectsOfType<Text>();
