@@ -46,8 +46,10 @@ public class gameManager : MonoBehaviour
         pauseMenu.SetActive(false);
         UI = null;
         eventSystem = GameObject.Find("EventSystem");
-        options = OPTIONSANDPM.Instance;
         GetComponent<AudioSource>().Play();
+        options = OPTIONSANDPM.Instance;
+        options.LoadSettings();
+        options.SetSettings();
     }
 
     // Update is called once per frame
@@ -57,7 +59,8 @@ public class gameManager : MonoBehaviour
         {
             UI = GameObject.Find("UI");
         }
-        
+
+        setFullScreen();
         setFont();
         pauseGame();
         
@@ -135,11 +138,15 @@ public class gameManager : MonoBehaviour
         }
     }
 
-    public void SetFullscreen(bool isFullscreen)
-    {
-        PlayerPrefs.SetInt("fullscreen", isFullscreen ? 1 : 0);
-        Screen.fullScreen = isFullscreen;
-        options.fullscreen = isFullscreen;
+    public void setFullScreen(){
+        if (options.fullscreen)
+        {
+            Screen.fullScreen = true;
+        }
+        else
+        {
+            Screen.fullScreen = false;
+        }
     }
 
 }

@@ -1720,8 +1720,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completedScenes: 0
+  pauseMenu: {fileID: 0}
   optionsMenu: {fileID: 0}
   UI: {fileID: 0}
+  dyslexicFont: {fileID: 0}
+  normalFont: {fileID: 0}
+  dyslexicFontAsset: {fileID: 0}
+  normalFontAsset: {fileID: 0}
 --- !u!4 &1421520142
 Transform:
   m_ObjectHideFlags: 0
@@ -1836,7 +1841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 932, y: -388}
+  m_AnchoredPosition: {x: 932, y: -359}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533123899
