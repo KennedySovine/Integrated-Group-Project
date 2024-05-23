@@ -12,45 +12,47 @@ public class CarMovingForward : MonoBehaviour
     private float acceleration = 0.01f;
 
     private bool canAccelerate = true;
-    private bool cannotStop = false;
 
     public GameObject trafficLight;
+    public GameObject crosswalk;
     // Start is called before the first frame update
     void Start()
     {
         currentSpeed = 20;
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         trafficLight = FindNearestWithTag("Light");
+        crosswalk = GameObject.Find("Crosswalk");
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(cannotStop);
+        if (Vector3.Distance(transform.position, trafficLight.transform.position)-stopDistance < 0.5){
+            Debug.Log("STOP");
+            stop = false;
+        }
         if (stop){
         //If a zebra light
         if (trafficLight.GetComponent<LightControl>() == null ){
-            if (Vector3.Distance(transform.position, trafficLight.transform.position)- stopDistance < 0.1){
-                cannotStop = true;
-            }
             if (levelManager.requirementsMet() || levelManager.isCrossing){
                 //Slowdown car
-                
-                    if (Vector3.Distance(transform.position, trafficLight.transform.position) > (stopDistance * 1.05))
+                if (Vector3.Distance(transform.position, trafficLight.transform.position) > (stopDistance * 1.05))
+                {
+                    if (currentSpeed > maxSpeed / 1.5)
                     {
-                        if (currentSpeed > maxSpeed / 1.5 && !cannotStop)
-                        {
-                            currentSpeed -= acceleration;
-                            canAccelerate = false;
-                        }
+                        currentSpeed -= acceleration;
+                        canAccelerate = false;
                     }
-                    //Stop car
-                    else if (Vector3.Distance(transform.position, trafficLight.transform.position) < stopDistance && !cannotStop)
-                    {
-                        currentSpeed = 0;
+                }
+                /*if (transform.position.x < 9 && transform.position.x > -10){
+                    return;
+                }*/
+                //Stop car
+                else if (Vector3.Distance(transform.position, trafficLight.transform.position) < stopDistance)
+                {
+                    currentSpeed = 0;
                 
-                    }
-
+                }
             }
             else{
                 canAccelerate = true;
