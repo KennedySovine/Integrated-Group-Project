@@ -109,6 +109,7 @@ public class gameManager : MonoBehaviour
 
     public void quitGame()
     {
+        options.SaveSettings();
         Application.Quit();
     }
 

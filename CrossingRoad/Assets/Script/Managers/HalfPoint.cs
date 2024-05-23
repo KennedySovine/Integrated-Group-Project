@@ -26,7 +26,6 @@ public class HalfPoint : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Halfpoint reached");
             levelManager.Reset();
             
             if (newStartPointSet){

@@ -40,13 +40,11 @@ public class LookSideButton : MonoBehaviour
 
     public void LookLeft()
     {
-        Debug.Log("Left Click");
         LM.changeCamera(false);
     }
 
     public void LookRight()
     {
-        Debug.Log("Right Click");
         LM.changeCamera(true);
     }
 }

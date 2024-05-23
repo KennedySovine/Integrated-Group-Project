@@ -72,7 +72,6 @@ public class LevelManager : MonoBehaviour
             // Check for space bar press only if ScrollingText script is not enabled
             if (Input.GetKeyDown("space"))
             {
-                Debug.Log("space key was pressed");
                 if (!requirementsMet())
                 {
                     StartCoroutine(CheckMessage());
@@ -115,7 +114,6 @@ public class LevelManager : MonoBehaviour
 //change the camera view
     public void changeCamera(bool side) // True = turn right False = turn left
     {
-        Debug.Log(side);
         if (side)
         {
             if (camNumCurrent == 2)
@@ -209,9 +207,7 @@ public class LevelManager : MonoBehaviour
     {
         popUpText.text = "You must look left and right before crossing!";
         popUp.SetActive(true);
-        Debug.Log("Before Waiting 3 seconds");
         yield return new WaitForSeconds(3);
-        Debug.Log("After Waiting 3 Seconds");
         popUp.SetActive(false);
     }
 }

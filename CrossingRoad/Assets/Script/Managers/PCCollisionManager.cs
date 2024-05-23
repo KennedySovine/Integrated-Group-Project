@@ -29,7 +29,6 @@ public class PCCollisionManager : MonoBehaviour
         //If player is hit by a car
         if (collision.gameObject.tag == "Car")
         {
-            Debug.Log("Player hit by car");
             //Restart scene
             levelManager.RestartScene();
         }
