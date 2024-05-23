@@ -57,14 +57,16 @@ public class LevelManager : MonoBehaviour
 
         spawnCar();
 
-        if (!gameObject.GetComponent<ScrollingText>().enabled || isMoving)
+        if (!gameObject.GetComponent<ScrollingText>().enabled)
         {
             tutorialPanel.SetActive(false);
-            if (Input.GetKeyDown("left")){
-                changeCamera(false);
-            }
-            else if (Input.GetKeyDown("right")){
-                changeCamera(true);
+            if (!isMoving){
+                if (Input.GetKeyDown("left")){
+                    changeCamera(false);
+                }
+                else if (Input.GetKeyDown("right")){
+                    changeCamera(true);
+                }
             }
             
             // Check for space bar press only if ScrollingText script is not enabled
