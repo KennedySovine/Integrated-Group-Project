@@ -87,8 +87,8 @@ public class gameManager : MonoBehaviour
     }
 
     public void pauseGame(){
-        // Pause game when escape key is pressed and not in main menu
-        if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 0)
+        // Pause game when escape key is pressed and not in main menu and the options menu isnt already open
+        if(Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().buildIndex != 0 && !optionsMenu.activeSelf)
         {
             eventSystem = GameObject.Find("EventSystem");
             pauseMenu.SetActive(!pauseMenu.activeSelf);
