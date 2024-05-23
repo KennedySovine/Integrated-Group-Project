@@ -11,21 +11,29 @@ public class CarMovingForward : MonoBehaviour
     private float currentSpeed = 0;
     private float acceleration = 0.01f;
 
+    private bool canAccelerate = true;
+
     public GameObject trafficLight;
+    public GameObject crosswalk;
     // Start is called before the first frame update
     void Start()
     {
         currentSpeed = 20;
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         trafficLight = FindNearestWithTag("Light");
+        crosswalk = GameObject.Find("Crosswalk");
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Vector3.Distance(transform.position, trafficLight.transform.position)-stopDistance < 0.5){
+            Debug.Log("STOP");
+            stop = false;
+        }
         if (stop){
         //If a zebra light
-        if (trafficLight.GetComponent<LightControl>() == null){
+        if (trafficLight.GetComponent<LightControl>() == null ){
             if (levelManager.requirementsMet() || levelManager.isCrossing){
                 //Slowdown car
                 if (Vector3.Distance(transform.position, trafficLight.transform.position) > (stopDistance * 1.05))
@@ -33,14 +41,21 @@ public class CarMovingForward : MonoBehaviour
                     if (currentSpeed > maxSpeed / 1.5)
                     {
                         currentSpeed -= acceleration;
+                        canAccelerate = false;
                     }
                 }
+                /*if (transform.position.x < 9 && transform.position.x > -10){
+                    return;
+                }*/
                 //Stop car
-                if (Vector3.Distance(transform.position, trafficLight.transform.position) < stopDistance)
+                else if (Vector3.Distance(transform.position, trafficLight.transform.position) < stopDistance)
                 {
                     currentSpeed = 0;
                 
                 }
+            }
+            else{
+                canAccelerate = true;
             }
         }
         //If traffic light is red
@@ -58,13 +73,15 @@ public class CarMovingForward : MonoBehaviour
             {
                 currentSpeed = 0;
             }
-        }
-        else{
-            if (currentSpeed < maxSpeed)
-            {
-                currentSpeed += acceleration;
+            else{
+                canAccelerate = true;
             }
         }
+        if (currentSpeed < maxSpeed && canAccelerate)
+        {
+            currentSpeed += acceleration;
+        }
+
         }
         transform.Translate(Vector3.forward * currentSpeed * Time.deltaTime);
 
