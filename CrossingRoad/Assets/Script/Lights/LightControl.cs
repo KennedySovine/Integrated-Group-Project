@@ -6,9 +6,7 @@ public class LightControl : MonoBehaviour
 {
     public GameObject[] Lights = new GameObject[3];
     private int waitTime;
-
     private LevelManager levelManager;
-
     public bool trafficMoving = false;
 
     // Start is called before the first frame update
@@ -19,13 +17,6 @@ public class LightControl : MonoBehaviour
         StartCoroutine(LightSequence());
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     IEnumerator LightSequence()
     {
         while (true)
