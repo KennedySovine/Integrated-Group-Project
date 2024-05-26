@@ -70,6 +70,9 @@ public class CarMovingForward : MonoBehaviour
                 canAccelerate = true;
             }
         }
+        else {
+            canAccelerate = true;
+        }
         if (currentSpeed < maxSpeed && canAccelerate)
         {
             currentSpeed += acceleration;
